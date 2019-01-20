@@ -1,8 +1,8 @@
 # 一、项目介绍
-eladmin 基于 Spring Boot 2.1.0 、 Spring Boot Jpa、 JWT、Spring Security、Redis、Vue的前后端分离后台管理系统。
+eladmin 基于 Spring Boot 2.1.0 、 Spring Boot Jpa、 JWT、Spring Security、Redis、Vue的前后端分离后台管理系统，项目采用分模块开发的方式，并且提供大量注释。
 
 前端模板基于：[https://github.com/PanJiaChen/vue-admin-template](https://github.com/PanJiaChen/vue-admin-template)<br>
-前端开发文档可以参考：[https://panjiachen.github.io/vue-element-admin-site/zh/guide/](https://panjiachen.github.io/vue-element-admin-site/zh/guide/)
+前端开发文档参考：[https://panjiachen.github.io/vue-element-admin-site/zh/guide/](https://panjiachen.github.io/vue-element-admin-site/zh/guide/)
 
 ## 1.1 项目地址
 |   后端源码  |   前端源码  |
@@ -18,8 +18,10 @@ eladmin 基于 Spring Boot 2.1.0 、 Spring Boot Jpa、 JWT、Spring Security、
     - 权限管理 权限细化到接口
     - 菜单管理 已实现菜单动态路由，后端可配置化，支持多级菜单
     - 定时任务 整合Quartz做定时任务，加入任务日志，任务运行情况一目了然
+    - 代码生成 高灵活度一键生成前后端代码，减少百分之80左右的工作任务
 - 系统监控
-    - 系统日志 使用apo记录用户操作日志，并且记录异常堆栈信息
+    - 操作日志 使用apo记录用户操作日志
+    - 异常日志 记录操作过程中的异常，并且提供查看异常的堆栈信息
     - 系统缓存 使用jedis将缓存操作可视化，并提供对redis的基本操作，可根据需求自行扩展
     - 实时控制台 实时打印logback日志，来自微强迫症患者的精心配色，更好的监控系统的运行状态
     - SQL监控 采用druid 监控数据库访问性能，默认用户名admin，密码123456
@@ -34,30 +36,36 @@ eladmin 基于 Spring Boot 2.1.0 、 Spring Boot Jpa、 JWT、Spring Security、
 ```
 ## 1.3 项目结构
 ```
-- common 公共包
-    - aop 记录日志与接口限流
-    - exception 项目异常处理
+# 项目模块如下
+- eladmin-common 公共模块
+    - aop.limit 接口限流自定义注解
+    - exception 项目统一异常的处理
     - mapper mapstruct的通用mapper
     - redis redis缓存相关配置
     - swagger2 接口文档配置
     - utils 通用工具
-- core 核心包
-    - config  JWT的安全过滤器配置与跨域配置
-    - rest 用户授权的接口
-    - security 配置spring security
-    - service 用户登录与权限的处理
-    - utils 包含加密工具与JWT工具
-- monitor 系统监控
-    - config 配置日志拦截器与WebSocket等
-    - domain 实体类
-    - repository 数据库操作
-    - rest 前端控制器
-    - service 业务接口
-        - impl 业务接口实现
-        - query 业务查询
-- quartz 定时任务
-- system 系统管理
-- tools 第三方工具
+- eladmin-system 系统核心模块
+	- config 配置跨域与静态资源
+	- modules 系统相关模块
+		- monitor 系统监控
+		    - config 配置日志拦截器与WebSocket等
+		    - domain 实体类
+		    - repository 数据库操作
+		    - rest 前端控制器
+		    - service 业务接口
+		        - impl 业务接口实现
+		        - query 业务查询
+        - quartz 定时任务
+        - security 系统安全
+	        - config  JWT的安全过滤器配置
+		    - rest 用户登录授权的接口
+		    - security 配置spring security
+		    - service 用户登录与权限的处理
+		    - utils JWT工具
+    	- system 系统管理
+- eladmin-logging 系统日志模块
+- eladmin-tools 系统第三方工具模块
+- eladmin-generator 系统代码生成模块
 ```
 ## 1.4 开发环境
 ### 1.4.1 后端开发环境
@@ -71,8 +79,18 @@ eladmin 基于 Spring Boot 2.1.0 、 Spring Boot Jpa、 JWT、Spring Security、
 *  Node.js v10.14.2
 *  开发工具：JetBrains WebStorm
 
-## 1.5 反馈交流
+## 1.5 项目捐赠
 
+> Donate
+> 
+> 项目的发展离不开你的支持，请作者喝杯咖啡吧☕️！
+
+|   微信  |   支付宝  |
+|--- | --- |
+|  ![](https://i.imgur.com/QJ2pqyg.png)   |  ![](https://i.imgur.com/eO95P7Q.png)  |
+
+## 1.6 反馈交流
+项目文档准备的比较仓促，有任何修改和建议都可以给我发送邮件 elunez@qq.com，或者在 ```github```文档源码中提 [Issues](https://github.com/elunez/eladmin-docs")
 - QQ群：<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=90830191a40600e3a07acdcc4864890fca50c8e3ca1772e7e288a561d576f6c4"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Quella/el-admin" title="Quella/el-admin"></a>
 - 个人邮箱 elunez@qq.com
 
@@ -115,7 +133,7 @@ npm run dev
 npm config set sass_binary_site https://npm.taobao.org/mirrors/node-sass/
 ```
 ### 3.1.2 生产环境
-需打包并把 ```dist``` 目录文件，部署到 ```Nginx``` 里，需将 ```prod.env.js``` 里面的 ```bash_api``` 改成自己相应的地址
+需打包并把 ```dist``` 目录文件，部署到 ```Nginx``` 里，需将 ```prod.env.js``` 里面的 ```bash_api``` 改成自己生产环境的后端接口地址
 ![](https://i.imgur.com/v07Xa5p.png)
 ```
 # 构建生产环境
@@ -133,9 +151,9 @@ server
 ```
 ## 3.2 后端项目部署
 ### 3.2.1 开发环境
-开发工具如果是 ```idea``` 的话，直接导入项目，安装完依赖后，按下图操作即可
+开发工具如果是 ```idea``` 的话，直接导入项目，安装完依赖后，进入 ```eladmin-system模块```按下图操作即可
 
-![](https://i.imgur.com/xrDZLTQ.png)
+![](https://i.imgur.com/BNB4o6d.png)
 
 **注意** 如果你在启动过程中出现类似这种错误，你需要去了解 ```MapStruct``` 的工作原理，目录 2.3 有提及
 
@@ -151,27 +169,22 @@ server
 
 |   第一步  |   第二步  |
 |--- | --- |
-|  ![](https://i.imgur.com/8Z0egVe.png)   |  ![](https://i.imgur.com/fcsaCfn.png)   |
+|  ![](https://i.imgur.com/DcoGodF.png)   |  ![](https://i.imgur.com/IpS0MTz.png)   |
 
-#### （2）将配置文件上传到服务器
-修改我们的配置文件用于 ```pro``` 环境，将它上传到服务器，你需要修改：
-
-1. 数据库连接地址
-2. 数据库密码
-3. 将 ```Hibernate ddl``` 设置成 ```none```，避免程序运行时自动更新数据库结构
-
-```
- hibernate:
-      ddl-auto: none
-```
+#### （2）修改配置文件
+按需修改我们的 ```application-prod.yml``` ，如：<br>
+1、修改数据库连接地址和密码<br>
+2、自定义 token有效期<br>
+3、是否允许生产环境使用代码生成器（默认禁用）<br>
+![](https://i.imgur.com/fStehtK.png)
 #### （3）编写脚本操作java服务
 **启动脚本** ```start.sh ```
 ``` sh
-nohup java -jar eladmin-v1.0.jar --spring.config.location=application.yml &
+nohup java -jar eladmin-system-1.5.jar --spring.profiles.active=prod &
 ```
 **停止脚本** ```stop.sh ```
 ``` sh
-PID=$(ps -ef | grep eladmin-v1.0.jar | grep -v grep | awk '{ print $2 }')
+PID=$(ps -ef | grep eladmin-system-1.5.jar | grep -v grep | awk '{ print $2 }')
 if [ -z "$PID" ]
 then
 echo Application is already stopped
@@ -189,7 +202,8 @@ touch nohup.out
 tail -f nohup.out
 ```
 **完整目录如下图**
-![](https://i.imgur.com/yaDRw1t.png)
+
+![](https://i.imgur.com/gMnQvhq.png)
 #### （3）操作java服务
 脚本创建完成后就可以直接操作```java```服务了，具体命令如下
 ```
@@ -326,25 +340,27 @@ include /www/server/panel/vhost/nginx/*.conf;
 - 密码： 123456
 
 # 四、系统日志与监控
-本系统 ```logback``` 打印系统日志，是用 ```log4jdbc``` 打印 ```sql``` 日志并显示占位符内容，使用 ```aop``` 方式记录用户操作日志，```logback配合log4jdbc``` 打印sql日志可以查看：[https://blog.csdn.net/zj7321/article/details/83144980](https://blog.csdn.net/zj7321/article/details/83144980)
+本系统 ```logback``` 打印系统日志，是用 ```log4jdbc``` 打印 ```sql``` 日志并显示占位符内容，使用 ```aop``` 方式记录用户操作日志，```logback配合log4jdbc``` 
+
+打印sql日志可以查看：[https://blog.csdn.net/zj7321/article/details/83144980](https://blog.csdn.net/zj7321/article/details/83144980)
 
 ## 4.1 logback
 
  ```logback``` 的使用可以查看：[https://blog.csdn.net/zj7321/article/details/83108240](https://blog.csdn.net/zj7321/article/details/83108240)
 ## 4.2 aop记录用户操作日志
 
-项目中用户的操作日志使用AOP的方式实现，切点为为自定义注解@Log，具体实现，请查看源码，源码位于：```common -> log```
+项目中用户的操作日志使用AOP的方式实现，切点为为自定义注解@Log，具体实现，请查看源码，源码位于：```eladmin-logging``` 模块
 
 ``` java
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Log {
-	String description() default "";
+	String value() default "";
 }
 ```
 **在控制器中使用**
 ``` java
-@Log(description = "查询菜单")
+@Log("查询菜单")
 @GetMapping(value = "/menus")
 public ResponseEntity getMenus(@RequestParam(required = false) String name){
     // 略
@@ -738,7 +754,97 @@ service.interceptors.response.use(
 )
 ```
 
-# 十、版本更新说明
+# 十、系统工具类
+系统常用工具类位于 eladmin-common 模块中的 utils 包下，具体作用如下：
+
+## 10.1 ElAdminConstant
+此工具类用户记录系统常用的静态常量
+## 10.2 EncryptUtils
+提供：Md5加密，对称加密，对称解密
+## 10.3 FileUtil
+```FileUtil``` 继承了 ```hutool```工具包中的 [FileUtil](http://hutool.mydoc.io/#text_319390)，并对其进行扩展，新增功能如下：
+1. MultipartFile转File：	```toFile```
+2. 获取文件扩展名：```getExtensionName```
+3. 获取不带扩展名的文件名：```getFileNameNoEx```
+4. 删除文件：```deleteFile```
+5. 获取文件大小：```getSize```
+
+## 10.4 ListSortUtil
+List按照指定字段排序的工具类
+## 10.5 PageUtil
+系统分页工具类，对返回的数据进行处理
+## 10.6 RequestHolder
+随时获取 ```HttpServletRequest```
+## 10.7 SecurityContextHolder（获取当前登录用户）
+通过此工具类，可以直接获取当前登录的用户
+## 10.8 SpringContextHolder
+随时获取 ```spring bean```
+## 10.9 StringUtils
+```StringUtils``` 继承了 ```apache```工具包中的 ```StringUtils```，并对其进行扩展，新增功能如下：
+1. 是否包含字符串：```inString```
+2. 驼峰命名法工具：```toCamelCase、toCapitalizeCamelCase、toUnderScoreCase```具体查看源码
+3. 获取ip地址：```getIP```
+4. 获取当天是周几：```getWeekDay```
+
+## 10.10 ThrowableUtil
+异常工具，可获取异常堆栈信息
+
+# 十一、代码生成功能
+本系统提供高灵活度的代码生成功能，只需要在数据库中设计好表结构，就能一键生成前后端代码，是不是很nice，具体使用说明如下：
+
+## 11.1 设计表结构
+这一步很关键，也有需要注意的地方：
+1. 特别注意、```主键需要设计成自增```
+2. 设计字段是否为空
+3. 设计注释，```前端会根据注释生成表格标题```
+
+![](https://i.imgur.com/6Jonzra.png)
+
+## 11.2 界面预览
+我们数据库中表都能在这看到，并且根据自己的需要进行 ```生成器配置```
+
+![](https://i.imgur.com/cfprlsg.png)
+
+## 11.3 生成器配置
+命名有些```中二```，但是不影响他的实用性，相关说明如下
+
+![](https://i.imgur.com/27mupUp.png)
+
+1. 至于包下：这个的意思是```生成的代码放到哪个包里面```
+2. 模块名称：这个顾名思义就是模块的名称
+3. 前端路径：前端代码生成的路径
+4. API路径：这个默认至于 ```src/api``` 目录下
+5. 是否覆盖：危险操作，需谨慎
+
+## 11.4 代码生成
+配置好生成器后就能进行代码生成啦，具体操作如下：
+1. 点击生成代码按钮
+2. 可以临时修改字段标题
+3. 配置查询方式，可选：精确或者模糊
+4. 列表显示：前端页面是否显示该字段，建议不要显示```ID```
+5. 当然是点击生成按钮啦
+
+![](https://i.imgur.com/j2H6Bqk.png)
+## 11.5 额外的工作
+代码生成可以节省你百分之```75```以上的开发任务，部分是需要自己需求进行修改的，如：
+1. 添加菜单：虽然代码给你生成了，但是菜单还是需要自己手动添加的
+2. 表单验证：前端代码没有表单验证，这个需要自己修改
+
+## 11.6 预览
+添加菜单后，生成的界面如下：<br>
+1、搜索
+
+![](https://i.imgur.com/5EZo8Y6.png)
+
+2、新增
+
+![](https://i.imgur.com/FxpztGl.png)
+
+3、列表
+
+![](https://i.imgur.com/TO8ffaX.png)
+
+# 十二、版本更新说明
 ## 2018年12月23日（v1.0）
 这个版本是一个纯净的后台，当然也有挺多的bug
 - 主要框架：spring boot+Spring Security+Redis
@@ -804,15 +910,3 @@ service.interceptors.response.use(
 **bug修复**
 - 修复redis key过长时删除失败的问题
 - 修复多级菜单渲染异常问题
-
-# 十一、后记
-项目文档准备的比较仓促，有任何修改和建议都可以给我发送邮件 elunez@qq.com，或者在 ```github```上提 [Issues](https://github.com/elunez/eladmin/issues "Issues")
-
-# 捐赠
-> Donate
-> 
-> 如果你觉得这个项目帮助到了你，你可以帮作者买一杯果汁表示鼓励🍹
-
-|   微信  |   支付宝  |
-|--- | --- |
-|  ![](https://i.imgur.com/QJ2pqyg.png)   |  ![](https://i.imgur.com/eO95P7Q.png)  |
