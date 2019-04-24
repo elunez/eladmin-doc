@@ -21,7 +21,7 @@
 |     |   后端源码  |   前端源码  |
 |---  |--- | --- |
 |  github   |  https://github.com/elunez/eladmin   |  https://github.com/elunez/eladmin-qd   |
-|  码云   |  https://github.com/elunez/eladmin   |  https://gitee.com/elunez/eladmin-qt   |
+|  码云   |  https://gitee.com/elunez/eladmin   |  https://gitee.com/elunez/eladmin-qt   |
 
 #### 反馈交流
 如果在使用中遇到什么问题可以在github上提 ````issues```` ，或者给发送邮件 ````elunez@qq.com```` ，如果我看到了一定及时回复，也可以加入项目讨论群： ```891137268```
