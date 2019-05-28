@@ -22,7 +22,8 @@
 		 // 加载 _sidebar.md,加载自定义侧边栏
 	    loadSidebar: true,
 		subMaxLevel: 4,
-		  
+		mergeNavbar: true,
+		auto2top: true,
 	    // 完整配置参数
 	    search: {
 	      maxAge: 86400000, // 过期时间，单位毫秒，默认一天
@@ -36,8 +37,10 @@
 	    }
 	}
 </script>
-<script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
 <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+<script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
+<script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
 <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+<script src="//unpkg.com/docsify-copy-code"></script>
 </body>
 </html>
