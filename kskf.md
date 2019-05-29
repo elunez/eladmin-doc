@@ -6,7 +6,7 @@
 * Node v10+
 
 前端安装完node后，最好设置下淘宝的镜像源，不建议使用cnpm（可能会出现奇怪的问题）
-``` npm
+```
 npm config set registry https://registry.npm.taobao.org
 配置后可通过下面方式来验证是否成功
 npm config get registry
@@ -48,11 +48,11 @@ npm config get registry
 3、编写脚本：编写脚步操作 ```java``` 服务
 
 (1) **启动脚本** ```start.sh ```<br>
-``` sh
+```
 nohup java -jar eladmin-system-2.0.jar --spring.profiles.active=prod &
 ```
 (2) **停止脚本** ```stop.sh ``` <br>
-``` sh
+```
 PID=$(ps -ef | grep eladmin-system-2.0.jar | grep -v grep | awk '{ print $2 }')
 if [ -z "$PID" ]
 then
@@ -67,7 +67,7 @@ fi
 touch nohup.out
 ```
 (4) **查看日志** ```log.sh```
-``` sh
+```
 tail -f nohup.out
 ```
 (5) **完整目录如下图**

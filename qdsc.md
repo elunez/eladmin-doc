@@ -1,7 +1,89 @@
+#### 菜单路由
+通过用户的角色返回相应的菜单路由，前端关键代码： ```src/router/index.js```<br>
+```js
+# 部分代码
+ store.dispatch('GetInfo').then(res => { // 拉取user_info
+          // 动态路由，拉取菜单
+          loadMenus(next, to)
+        }).catch((err) => {
+          console.log(err)
+          store.dispatch('LogOut').then(() => {
+            location.reload() // 为了重新实例化vue-router对象 避免bug
+          })
+        })
+```
+
+##### 可配置项
+```js
+//当设置 true 的时候该路由不会再侧边栏出现 如401，login等页面，或者如一些编辑页面/edit/1
+hidden: true // (默认 false)
+
+//当设置 noredirect 的时候该路由在面包屑导航中不可被点击
+redirect: 'noredirect'
+
+//当你一个路由下面的 children 声明的路由大于1个时，自动会变成嵌套的模式--如组件页面
+//只有一个时，会将那个子路由当做根路由显示在侧边栏--如引导页面
+//若你想不管路由下面的 children 声明的个数都显示你的根路由
+//你可以设置 alwaysShow: true，这样它就会忽略之前定义的规则，一直显示根路由
+alwaysShow: true
+
+name: 'router-name' //设定路由的名字，一定要填写不然使用<keep-alive>时会出现各种问题
+meta: {
+  title: 'title' //设置该路由在侧边栏和面包屑中展示的名字
+  icon: 'svg-name' //设置该路由的图标
+  noCache: true //如果设置为true，则不会被 <keep-alive> 缓存(默认 false)
+  breadcrumb: false // 如果设置为false，则不会在breadcrumb面包屑中显示,
+  affix: true // 设置成true表示，tag-view不可删除
+}
+```	
+##### 添加图标
+如果你没有在本项目 Icon 中找到需要的图标，可以到 [iconfont.cn](iconfont.cn) 上选择并生成自己的业务图标库，再进行使用。或者其它 svg 图标网站，下载 svg 并放到 ```src/icons/svg``` 文件夹之中就可以了，下载方式如下图：
+
+![](https://i.loli.net/2019/03/28/5c9c93ce6a575.gif)
+
+使用方式：
+```
+<svg-icon icon-class="password" /> //icon-class 为 icon 的名字
+```
+##### 添加菜单
+也不是所有菜单都需要存入数据库，有些公共的菜单只需要在 ```src/router/routers.js``` 中添加就可以了，如：个人中心页面
+```js
+{
+    path: '/user',
+    component: Layout,
+    hidden: true,
+    redirect: 'noredirect',
+    children: [
+      {
+        path: 'center',
+        component: () => import('@/views/system/user/center'),
+        name: '个人中心',
+        meta: { title: '个人中心', icon: 'user' }
+      }
+    ]
+  }
+```
+##### 动态菜单
+本项目的动态菜单支持到 ```4级``` 菜单，支持 ```外链```，支持```自定义图标```，添加教程如下：
+
+######  (1) 添加外链
+ 
+![](https://i.loli.net/2019/05/27/5cebaeff6375831502.png)
+
+ ###### (2) 添加内部菜单
+ 
+组件路径为 src/views
+
+|   添加内部菜单  |   组件路径对应  |
+|--- | --- |
+|  ![](https://i.loli.net/2019/05/27/5cebaf5b55b1719116.png)   |  ![](https://i.loli.net/2019/05/27/5cebafaaa946592632.png)   |
+
+##### 分配菜单
+分配菜单需要在角色管理中操作，注意： ``` 分配菜单后，对应的权限也需要分配，不然访问会没权限，从而跳转到 401 页面```
 #### 权限控制
 可以引入权限判断函数或者使用全局指令函数实现前端的权限控制<br>
 1、使用全局指令函数```  v-permission="" ```
-```
+```html
 <!-- 新增 -->
 <div v-permission="['ADMIN','USER_ALL','USER_CREATE']" style="display: inline-block;margin: 0px 2px;">
       <el-button
@@ -205,14 +287,14 @@ export default {
 前端使用这个字典
 
 **（1）引入组件**
-``` javascript
+``` js
 import initDict from '@/mixins/initDict'
 export default {
   mixins: [initDict]
 }
 ```
 **（2）使用钩子函数获取字典**
-``` javascript
+``` js
 import initDict from '@/mixins/initDict'
 export default {
  mixins: [initDict],
@@ -225,7 +307,7 @@ export default {
 }
 ```
 **（3）使用字典**
-```javascript
+```js
 <el-form-item v-if="form.pid !== 0" label="状态" prop="enabled">
         <el-radio v-for="item in dicts" :key="item.id" v-model="form.enabled" :label="item.value">{{ item.label }}</el-radio>
  </el-form-item>
