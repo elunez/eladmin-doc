@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
+    "vuepress": "^1.2.0",
     "vuepress-plugin-comment": "^0.7.2"
   }
 }

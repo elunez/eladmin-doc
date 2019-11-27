@@ -2,7 +2,7 @@
 
 EL-ADMIN 文档源码
 
-#### Build Setup
+## Build Setup
 ``` bash
 # 安装依赖
 yarn install
@@ -14,6 +14,8 @@ yarn docs:dev
 yarn docs:build
 ```
 
-#### 反馈交流
+## License
+[Version 2.0](https://github.com/elunez/eladmin-doc/blob/master/LICENSE)
 
-- QQ交流群：891137268
+
+>Powered by [vuepress](https://vuepress.vuejs.org/zh/)
