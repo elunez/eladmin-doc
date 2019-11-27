@@ -11,7 +11,8 @@ module.exports = {
           appKey: 'Aeusc62FpStk4K4yVAiFonnU'
         }
       }
-    ]
+    ],
+    ['@vuepress/back-to-top']
   ],
   title: 'EL-ADMIN',
   description: '使用 EL-ADMIN 快速构建你的 Web 程序',
