@@ -25,7 +25,7 @@ module.exports = {
   themeConfig: {
     // displayAllHeaders: true,
     sidebarDepth: 2, // 提取markdown中h2 和 h3 标题，显示在侧边栏上。
-    lastUpdated: 'Last Updated', // 文档更新时间
+    lastUpdated: '更新时间', // 文档更新时间
     logo: '/logo/small.png',
     nav:[
       { text: '指南', link: '/guide/' },
@@ -97,7 +97,7 @@ module.exports = {
       ]
     },
     // 假如你的文档仓库和项目本身不在一个仓库：
-    docsRepo: 'vuejs/vuepress',
+    docsRepo: 'elunez/eladmin-doc',
     // 假如文档不是放在仓库的根目录下：
     docsDir: 'docs',
     // 默认是 false, 设置为 true 来启用
