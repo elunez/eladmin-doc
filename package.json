@@ -1,0 +1,14 @@
+{
+  "name": "eladmin-doc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "Apache License 2.0",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
+    "vuepress-plugin-comment": "^0.7.2"
+  }
+}
