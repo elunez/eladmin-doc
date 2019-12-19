@@ -17,7 +17,16 @@ module.exports = {
   title: 'EL-ADMIN',
   description: '使用 EL-ADMIN 快速构建你的 Web 程序',
   head: [
-    ['link', { rel: 'icon', href: '/logo/small.png' }]
+    ['link', { rel: 'icon', href: '/logo/small.png' }],
+    ['script', {}, `
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?9dcf4bca9cc47caeef4caf5d5f982e86";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+    })();
+  `]
   ],
   markdown: {
     lineNumbers: true // 代码块显示行号
