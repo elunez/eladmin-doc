@@ -25,7 +25,6 @@ EL-ADMIN 基于 Spring Boot 2.1.0 、 Jpa、 Spring Security、redis、Vue 的�
 - 字典管理：可维护常用一些固定的数据，如：状态，性别等
 - 操作日志：记录用户操作的日志
 - 异常日志：记录异常日志，方便开发人员定位错误
-- 系统缓存：将缓存操作可视化，并提供对redis的基本操作，可根据需求自行扩展
 - SQL监控：采用druid 监控数据库访问性能，默认用户名admin，密码123456
 - 定时任务：整合Quartz做定时任务，加入任务日志，任务运行情况一目了然
 - 代码生成：高灵活度一键生成前后端代码，减少百分之80左右的工作任务
@@ -33,6 +32,8 @@ EL-ADMIN 基于 Spring Boot 2.1.0 、 Jpa、 Spring Security、redis、Vue 的�
 - 免费图床：使用sm.ms图床，用作公共图片上传使用，该图床不怎么稳定，不太建议使用
 - 七牛云存储：可同步七牛云存储的数据到系统，无需登录七牛云直接操作云数据
 - 支付宝支付：整合了支付宝支付并且提供了测试账号，可自行测试
+- 服务监控：监控服务器的负载情况
+- 运维管理：一键部署你的应用
 
 ## 项目结构
 
@@ -45,6 +46,8 @@ EL-ADMIN 基于 Spring Boot 2.1.0 、 Jpa、 Spring Security、redis、Vue 的�
 - `eladmin-tools` 为第三方工具模块，包含了图床、邮件、七牛云、支付宝
 
 - `eladmin-generator` 为系统的代码生成模块
+
+- `eladmin-monitor` 独立模块，系统监控模块，需要独立部署
 ```
 - eladmin-common 公共模块
     - annotation 为系统自定义注解
@@ -56,10 +59,11 @@ EL-ADMIN 基于 Spring Boot 2.1.0 、 Jpa、 Spring Security、redis、Vue 的�
 - eladmin-system 系统核心模块（系统启动入口）
 	- config 配置跨域与静态资源，与数据权限
 	    - thread 线程池相关
-	- modules 系统相关模块(登录授权、系统监控、定时任务等)
+	- modules 系统相关模块(登录授权、系统监控、定时任务、运维管理等)
 - eladmin-logging 系统日志模块
 - eladmin-tools 系统第三方工具模块
 - eladmin-generator 系统代码生成模块
+- eladmin-monitor 独立模块，系统监控模块，需要独立启动部署
 ```
 
 

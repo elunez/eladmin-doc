@@ -58,11 +58,6 @@ public ResponseEntity update(@Validated @RequestBody Menu resources){
 public class ElPermissionConfig {
 
     public Boolean check(String ...permissions){
-        // 如果是匿名访问的，就放行
-        String anonymous = "anonymous";
-        if(Arrays.asList(permissions).contains(anonymous)){
-            return true;
-        }
         // 获取当前用户的所有权限
         List<String> elPermissions = SecurityUtils.getUserDetails().getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList());
         // 判断当前用户的所有权限是否包含接口上定义的权限
@@ -74,8 +69,6 @@ public class ElPermissionConfig {
 ```java
 // 支持多权限验证
 @PreAuthorize("@el.check('user:list')") 
-// 接口放行
-@PreAuthorize("@el.check('anonymous')") 
 ```
 ### 匿名访问
 在我们使用的时候，有写接口是不需要验证权限，这个时候就需要我们给接口放行，使用方式如下
@@ -103,20 +96,14 @@ protected void configure(HttpSecurity httpSecurity) throws Exception {
 
 **2、使用注解方式**
 
-使用注解有三种方式可以放行接口
-
 ``` java
 // 自定义匿名接口
 @AnonymousAccess
-// 标识为匿名接口
-@PreAuthorize("hasRole('anonymous')")
-// 标识为匿名接口
-@PreAuthorize("@el.check('anonymous')")
 ```
 ## 通用查询
 本系统对 Jpa 的查询进行了封装，现可以通过 `@Query` 注解实现简单的查询与复杂查询
 
-简单查询：`等于(默认)、大于等于、小于等于、左模糊、右模糊、中模糊、多字段模糊`。
+简单查询：`等于(默认)、大于等于、小于等于、左模糊、右模糊、中模糊、多字段模糊、NOT_EQUAL 、BETWEEN 、NOT_NULL`。
 
 复杂查询：`包含（IN）查询、左连接、右连接`
 
@@ -129,7 +116,6 @@ protected void configure(HttpSecurity httpSecurity) throws Exception {
 | blurry   | 多字段模糊查询，值为实体字段名称                     | ""     |
 | joinName | 关联实体的名称                                       | ""     |
 | join     | 连接查询方式，左连接或者右连接                       | LEFT   |
-
 
 ### 使用方式
 **1、创建一个查询类 `QueryCriteria`**
@@ -158,6 +144,10 @@ public class QueryCriteria {
     @Query(type = Query.Type.LESS_THAN, propName = "createTime")
     private Timestamp endTime;
 
+    // BETWEEN
+    @Query(type = Query.Type.BETWEEN)
+    private List<Timestamp> startTime;
+
     // 多字段模糊查询，blurry 为字段名称
     @Query(blurry = "a,b,c")
     private String blurry;
@@ -173,6 +163,14 @@ public class QueryCriteria {
     // 右关联查询，right Join ， joinName为关联实体名称
     @Query(joinName = "", join = Query.Join.RIGHT)
     private String f;
+
+    // NOT_EQUAL 不等于
+    @Query(type = Query.Type.NOT_EQUAL)
+    private String g;
+
+    // NOT_NULL 不为空
+    @Query(type = Query.Type.NOT_NULL)
+    private String g;
 }
 ```
 
@@ -212,14 +210,14 @@ public Object queryAll(QueryCriteria criteria, Pageable pageable){
 public class RedisConfig extends CachingConfigurerSupport {
 
     /**
-     *  设置 redis 数据默认过期时间，默认6小时
+     *  设置 redis 数据默认过期时间，默认2小时
      *  设置@cacheable 序列化方式
      */
     @Bean
     public RedisCacheConfiguration redisCacheConfiguration(){
         FastJsonRedisSerializer<Object> fastJsonRedisSerializer = new FastJsonRedisSerializer<>(Object.class);
         RedisCacheConfiguration configuration = RedisCacheConfiguration.defaultCacheConfig();
-        configuration = configuration.serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(fastJsonRedisSerializer)).entryTtl(Duration.ofHours(6));
+        configuration = configuration.serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(fastJsonRedisSerializer)).entryTtl(Duration.ofHours(2));
         return configuration;
     }
 
@@ -688,44 +686,44 @@ public class TestTask {
 
 我们数据库中表都能在这看到，需根据自己的需求进行 ```生成器配置```
 
-![](https://i.loli.net/2019/03/28/5c9c949238a5b.png)
+![](https://i.loli.net/2019/12/22/Te61XtnxskB5Shb.png)
 
 ### 代码生成
 
-#### 代码生成配置
+#### 代码生成配置（配置记录将保留在数据库中）
 
-1. 模块名称：这个顾名思义就是模块的名称
-2. 至于包下：这个的意思是```生成的代码放到哪个包里面```
-3. 前端路径：前端代码生成的路径
-5. 是否覆盖：危险操作，需谨慎
+首先点击编辑按钮
 
-我们配置好生成器后就能进行代码生成啦，具体操作如下：
-1. 点击生成代码按钮
-2. 可以临时修改字段标题
-3. 配置查询方式，可选：精确或者模糊
-4. 列表显示：前端页面是否显示该字段
-5. 点击生成按钮
+##### 配置表字段信息
 
-![](https://i.loli.net/2019/11/01/Ap4ysvHe1lh6guT.png)
+![QQ截图20191222123450.png](https://i.loli.net/2019/12/22/oHyBMOYgw925ui6.png)
+
+- 列表：如果勾选会显示在前端的table中
+- 表单：如果勾选会显示在新增和编辑的form表单中
+- 日期注解：可以配置自动创建时间
+- 数据字段：一般用于单选、多选、下拉列表
+
+##### 配置生成器信息
+
+![QQ截图20191222123402.png](https://i.loli.net/2019/12/22/XUMgDk5aKoHth43.png)
+
+##### 生成代码
+
+可以点击【保存&生成】按钮生成代码
+
+#### 代码生成预览
+
+![QQ截图20191222113651.png](https://i.loli.net/2019/12/22/fmHiCn5BzdPqEGy.png)
+
+#### 代码生成打包下载
+
+![QQ截图20191222125359.png](https://i.loli.net/2019/12/22/Sui51rXQcOlkCbZ.png)
+
 #### 额外工作
 代码生成可以节省你```80%```左右的开发任务，部分是需要自己需求进行修改的，如：
 1. 添加菜单：虽然代码给你生成了，但是菜单还是需要自己手动添加的
 2. 按钮权限：接口权限默认生成了，但是没有添加进数据库，需要自行添加，菜单管理中添加按钮
 
-#### 界面预览
-添加菜单后，生成的界面如下：
-
-**1、搜索**
-
-![](https://i.loli.net/2019/03/28/5c9c94cec325d.png)
-
-**2、新增**
-
-![](https://i.loli.net/2019/03/28/5c9c94e967d00.png)
-
-**3、列表**
-
-![](https://i.loli.net/2019/03/28/5c9c94fd8d347.png)
 ## 系统基类
 
  2.3 版本加入了 Entity 基类 和 DTO 基类，大家可以按需去继承和修改，代码路径 
@@ -733,6 +731,85 @@ public class TestTask {
 ```
 eladmin-common -> me.zhengjie.base
 ```
+
+## 服务监控
+
+![](https://i.loli.net/2019/12/22/7PdAW4Dot9EGJkR.png)
+
+要使用服务监控功能，需要将 eladmin-monitor-2.4.jar 部署到需要监控的服务器上
+
+- Window服务器：请将eladmin\eladmin-monitor\src\main\resources目录下的sigar-x86-winnt.dll或者sigar-amd64-winnt.dll 放到java的bin目录下
+- Linux服务器：请将eladmin\eladmin-monitor\src\main\resources目录下的libsigar-x86-linux.so或者libsigar-amd64-linux.so 放到java的bin目录下
+- 将打包好的 eladmin-monitor-2.4.jar 放到服务器上，执行 nohup java -jar eladmin-monitor-2.4.jar >nohup.out 2>&1 & 即可
+
+## 运维管理
+
+![QQ截图20191222113815.png](https://i.loli.net/2019/12/22/b769oHckuaKdlpA.png)
+
+使用步骤：
+### 1、添加一个服务器
+
+![QQ截图20191222125954.png](https://i.loli.net/2019/12/22/Jnwz1BsG8RbtOvf.png)
+
+### 2、新增一个应用
+
+这里用 `eladmin-monitor-2.4.jar` 来举例，设置应用名称与目录，然后编写脚本即可
+
+![QQ截图20191222130114.png](https://i.loli.net/2019/12/22/KbVPO2fL45wsBQE.png)
+
+部署脚本
+
+```shell script
+mv -f /opt/upload/eladmin-monitor-2.4.jar /opt/monitor
+cd /opt/monitor
+nohup java -jar eladmin-monitor-2.4.jar >nohup.out 2>&1 &
+```
+
+启动脚本
+```shell script
+cd /opt/monitor
+nohup java -jar eladmin-monitor-2.4.jar >nohup.out 2>&1 &
+```
+
+### 部署应用
+
+打开部署管理菜单，新建一个部署
+
+![QQ截图20191222130324.png](https://i.loli.net/2019/12/22/9DQjJxbXhsoU8Rq.png)
+
+点击一键部署按钮，上传应用文件, 上传后系统就会自动部署了
+
+(1)
+
+![QQ截图20191222130609.png](https://i.loli.net/2019/12/22/7fl2Trp5EI64kD3.png)
+
+(2)
+
+![QQ截图20191222130828.png](https://i.loli.net/2019/12/22/Fgz5hRA4DaJB13X.png)
+
+(3)
+
+![QQ截图20191222130837.png](https://i.loli.net/2019/12/22/XPlk9uZOpY5BLvj.png)
+
+### 管理应用
+
+![QQ截图20191222131015.png](https://i.loli.net/2019/12/22/OnNesHbBcZypWUC.png)
+
+### 数据库管理
+
+![QQ截图20191222131316.png](https://i.loli.net/2019/12/22/kI1uxbnmKFS4JEf.png)
+
+![QQ截图20191222131408.png](https://i.loli.net/2019/12/22/bWLjREBy1eMQ2Gi.png)
+
+## 免费图床
+
+图床使用的是 https://sm.ms/ ,现已支持同步操作
+
+![QQ截图20191222114022.png](https://i.loli.net/2019/12/22/kegPjTHiKzWp9XO.png)
+
+需要我们在 https://sm.ms/ 中注册账号，然后将 token 配置进项目，就能实现同步功能
+
+![QQ截图20191222131634.png](https://i.loli.net/2019/12/22/Tt71EPZbIjR8Aw2.png)
 
 ## 异步线程池
 

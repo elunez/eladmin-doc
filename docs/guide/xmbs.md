@@ -6,14 +6,13 @@
 ### 1、修改配置文件
 
 按需修改我们的 ```application-prod.yml```
-```yml
-配置数据源
+```yaml
+#配置数据源
 spring:
   datasource:
     druid:
-      type: com.alibaba.druid.pool.DruidDataSource
+      db-type: com.alibaba.druid.pool.DruidDataSource
       driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-      # 数据库配置
       url: jdbc:log4jdbc:mysql://localhost:3306/eladmin?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false
       username: root
       password: 123456
@@ -56,13 +55,16 @@ spring:
 #jwt
 jwt:
   header: Authorization
-  secret: mySecret
-  # token 过期时间 2个小时
-  expiration: 7200000
+  # 令牌前缀
+  token-start-with: Bearer
+  # 必须使用最少88位的Base64对该令牌进行编码
+  base64-secret: ZmQ0ZGI5NjQ0MDQwY2I4MjMxY2Y3ZmI3MjdhN2ZmMjNhODViOTg1ZGE0NTBjMGM4NDA5NzYxMjdjOWMwYWRmZTBlZjlhNGY3ZTg4Y2U3YTE1ODVkZDU5Y2Y3OGYwZWE1NzUzNWQ2YjFjZDc0NGMxZWU2MmQ3MjY1NzJmNTE0MzI=
+  # 令牌过期时间 此处单位/毫秒 ，默认2小时，可在此网站生成 https://www.convertworld.com/zh-hans/time/milliseconds.html
+  token-validity-in-seconds: 7200000
   # 在线用户key
-  online: online-token
+  online-key: online-token
   # 验证码
-  codeKey: code-key
+  code-key: code-key
 
 #是否允许生成代码，生产环境设置为false
 generator:
@@ -93,7 +95,7 @@ file:
 
 |   第一步  |   第二步  |
 |--- | --- |
-|  ![](https://i.loli.net/2019/03/28/5c9c95c835dd0.png)   |  ![](https://i.loli.net/2019/05/27/5ceb944760b4d75134.png)   |
+|  ![](https://i.loli.net/2019/03/28/5c9c95c835dd0.png)   |  ![QQ截图20191222132345.png](https://i.loli.net/2019/12/22/EaHRCpo9jmSXfTI.png)   |
 
 ### 3、编写脚本
 
@@ -101,11 +103,11 @@ file:
 
 (1) **启动脚本** ```start.sh ```<br>
 ```
-nohup java -jar eladmin-system-2.0.jar --spring.profiles.active=prod &
+nohup java -jar eladmin-system-2.4.jar --spring.profiles.active=prod &
 ```
 (2) **停止脚本** ```stop.sh ``` <br>
 ```
-PID=$(ps -ef | grep eladmin-system-2.0.jar | grep -v grep | awk '{ print $2 }')
+PID=$(ps -ef | grep eladmin-system-2.4.jar | grep -v grep | awk '{ print $2 }')
 if [ -z "$PID" ]
 then
 echo Application is already stopped
@@ -124,7 +126,7 @@ tail -f nohup.out
 ```
 (5) **完整目录如下图**
 
-![](https://i.loli.net/2019/05/27/5ceb96766a44494697.png)
+![QQ截图20191224120620.png](https://i.loli.net/2019/12/24/KEzoIi8veR3WcQh.png)
 
 4、操作java服务：脚本创建完成后就可以操作 ```java``` 服务了
 ```
@@ -154,7 +156,9 @@ server {
 ```
 ## 前端部署
 ### 1、修改接口地址
-将 ```config/prod.env.js``` 里面的 ```bash_api``` 改成自己生产环境的后端接口地址（域名或IP）
+
+![QQ截图20191222132516.png](https://i.loli.net/2019/12/22/q8jW3umfJQStOGw.png)
+
 ::: tip
 注意：``` 如果是IP需设置外网IP```
 :::
@@ -175,9 +179,16 @@ server
     {
         listen 80;
         server_name 域名/外网IP;
-        index index.html index.htm;
+        index index.html;
         root  /www/server/dist;  #dist上传的路径
-        error_page 404 /index.html; #这个配置，预防页面刷新后跳转到404页面
+        # 避免访问出现 404 错误
+        location / {
+          try_files $uri $uri/ @router;
+          index  index.html;
+        }
+        location @router {
+          rewrite ^.*$ /index.html last;
+        }  
     } 
 ```
-重启启动 ```nginx``` 后，访问域名或者IP地址即可
+重载 ```nginx``` 配置后，访问你的域名或者IP地址即可

@@ -38,7 +38,7 @@ meta: {
 }
 ```
 ### 添加图标
-如果你没有在本项目 Icon 中找到需要的图标，可以到 [iconfont.cn](iconfont.cn) 上选择并生成自己的业务图标库，再进行使用。或者其它 svg 图标网站，下载 svg 并放到 ```src/icons/svg``` 文件夹之中就可以了，下载方式如下图：
+如果你没有在本项目 Icon 中找到需要的图标，可以到 [iconfont.cn](iconfont.cn) 上选择并生成自己的业务图标库，再进行使用。或者其它 svg 图标网站，下载 svg 并放到 ```src/assets/icons/svg``` 文件夹之中就可以了，下载方式如下图：
 
 ![](https://i.loli.net/2019/03/28/5c9c93ce6a575.gif)
 
@@ -115,90 +115,13 @@ export default{
 </script>
 ```
 ## 数据加载
-本系统使用 [混入方式](https://cn.vuejs.org/v2/guide/mixins.html) 封装了表格的数据加载与分页，源码位于 ```src/mixins/initData.js```，代码如下：
-```js
-import { initData } from '@/api/data'
+本系统数据加载使用了两种模式：
 
-export default {
-  data() {
-    return {
-      loading: true, data: [], page: 0, size: 10, total: 0, url: '', params: {}, query: {}, time: 170
-    }
-  },
-  methods: {
-    async init() {
-      if (!await this.beforeInit()) {
-        return
-      }
-      return new Promise((resolve, reject) => {
-        this.loading = true
-        initData(this.url, this.params).then(res => {
-          this.total = res.totalElements
-          this.data = res.content
-          setTimeout(() => {
-            this.loading = false
-          }, this.time)
-          resolve(res)
-        }).catch(err => {
-          this.loading = false
-          reject(err)
-        })
-      })
-    },
-    beforeInit() {
-      return true
-    },
-    pageChange(e) {
-      this.page = e - 1
-      this.init()
-    },
-    sizeChange(e) {
-      this.page = 0
-      this.size = e
-      this.init()
-    }
-  }
-}
+1. 混入模式，相对简单
+2. 组件模式，功能强大
 
-```
-具体使用，如下
-```vue
-<template>
-  <div class="app-container">
-    <!--表格渲染-->
-    <el-table v-loading="loading" :data="data" size="small" style="width: 100%;">
-      <el-table-column prop="name" label="名称"/>
-    </el-table>
-    <!--分页组件-->
-    <el-pagination
-      :total="total"
-      style="margin-top: 8px;"
-      layout="total, prev, pager, next, sizes"
-      @size-change="sizeChange"
-      @current-change="pageChange"/>
-  </div>
-</template>
+具体查看源码
 
-<script>
-import initData from '@/mixins/initData'
-export default {
-  mixins: [initData,],
-  created() {
-    this.$nextTick(() => {
-      this.init()
-    })
-  },
-  methods: {
-    beforeInit() {
-      this.url = 'api/user'
-      const sort = 'id,desc'
-      this.params = { page: this.page, size: this.size, sort: sort }
-      return true
-    }
-  }
-}
-</script>
-```
 ## 异常处理
 在 ```src/utils/request.js``` 文件中对所有的 ```request```请求进行拦截，通过``` response``` 拦截器对接口返回的状态码进行分析与异常处理，部分代码如下
 ```js

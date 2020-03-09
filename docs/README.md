@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /logo/logo.png
-actionText: 快速上手 →
+actionText: 快速开始 →
 actionLink: /guide/
 features:
 - title: 技术栈
