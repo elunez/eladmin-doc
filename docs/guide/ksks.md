@@ -48,7 +48,7 @@ git clone https://gitee.com/elunez/eladmin.git
 ### 前端运行
 1、克隆项目：
 ```
-https://gitee.com/elunez/eladmin-web.git
+git clone https://gitee.com/elunez/eladmin-web.git
 ``` 
 
 2、安装依赖：打开项目后输入命令安装依赖
