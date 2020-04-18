@@ -69,7 +69,7 @@ npm run dev
 ```
 npm config set registry https://registry.npm.taobao.org
 # 配置后可通过下面方式来验证是否成功
-npm config
+npm config get registry
 ```
 *2、linux 系统在安装依赖的时候会出现 node-sass 无法安装的问题*
 
