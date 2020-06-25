@@ -121,11 +121,11 @@ file:
 
 **打包项目：**
 
-![](https://img.el-admin.xin/20200605161715.png)
+![](https://img.el-admin.vip/images/2020/06/25/20200605161715.png)
 
 **上传到服务器**
 
-![](https://img.el-admin.xin/20200605161831.png)
+![](https://img.el-admin.vip/images/2020/06/25/20200605161831.png)
 
 ### 编写脚本
 
@@ -191,7 +191,7 @@ server {
 注意：``` 如果是IP需设置外网IP```
 :::
 
-![](https://img.el-admin.xin/20200605162316.png)
+![](https://img.el-admin.vip/images/2020/06/25/20200605162316.png)
 
 ### History 模式
 项目默认是 History 模式，所以直接打包即可
@@ -227,11 +227,11 @@ server
 
 #### 1、修改 routers.js，取消 hash 的注释
 
-![](https://img.el-admin.xin/20200605163500.png)
+![](https://img.el-admin.vip/images/2020/06/25/20200605163500.png)
 
 #### 2、修改根目录 vue.config.js 配置
 
-![](https://img.el-admin.xin/20200605163611.png)
+![](https://img.el-admin.vip/images/2020/06/25/20200605163611.png)
 
 #### Nginx 配置
 打包上传方式与 History 模式一致
@@ -261,11 +261,11 @@ server {
 }
 ```
 文件目录
-![image](https://img.el-admin.xin/CIyQda.png)
+![image](https://img.el-admin.vip/images/2020/06/25/CIyQda.png)
 
 注意目录名称要与配置名称一致
 
-![image](https://img.el-admin.xin/PP6D6b.png)
+![image](https://img.el-admin.vip/images/2020/06/25/PP6D6b.png)
 
 
 ## 重启 Nginx

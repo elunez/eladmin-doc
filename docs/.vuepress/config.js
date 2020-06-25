@@ -1,19 +1,6 @@
 module.exports = {
     // 插件
     plugins: {
-        'vuepress-plugin-comment': {
-            choosen: 'gitalk',
-            // options选项中的所有参数，会传给Valine的配置
-            options: {
-                id: '留言板',
-                clientID: '08f039f9aac8015220ab',
-                clientSecret: 'b98a7d05379a0ffc7ad8d6332bee85b3790332c4',
-                repo: 'eladmin-doc',
-                owner: 'elunez',
-                admin: ['elunez'],
-                distractionFreeMode: false
-            }
-        },
         '@vuepress/back-to-top': {}
     },
     // 头部
@@ -35,7 +22,6 @@ module.exports = {
         nav: [
             { text: '指南', link: '/guide/'},
             { text: '日志', link: '/version/V2.5/'},
-            { text: '留言', link: '/leaveMessage/'},
             { text: '捐赠', link: '/donation/'},
             { text: '体验', link: 'https://el-admin.xin'},
             { text: '博客', link: 'https://www.ydyno.com/'},
@@ -103,9 +89,6 @@ module.exports = {
                         '/guide/mx'
                     ]
                 }
-            ],
-            '/leaveMessage/': [
-                '/leaveMessage/',
             ],
             '/donation/': [
                 '/donation/',

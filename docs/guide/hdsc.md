@@ -8,19 +8,19 @@ comment: false
 ### 新建模块
 选择 File -> New -> Module
 
-![](https://img.el-admin.xin/20200606132523.png)
+![](https://img.el-admin.vip/images/2020/06/25/20200606132523.png)
 
 选择 Maven -> Next
 
-![](https://img.el-admin.xin/20200606132934.png)
+![](https://img.el-admin.vip/images/2020/06/25/20200606132934.png)
 
 选择父模块 -> Finish
 
-![](https://img.el-admin.xin/20200606133131.png)
+![](https://img.el-admin.vip/images/2020/06/25/20200606133131.png)
 
 回到项目，在新模块中创建包
 
-![](https://img.el-admin.xin/20200606134124.png)
+![](https://img.el-admin.vip/images/2020/06/25/20200606134124.png)
 
 ::: tip
 如果包名和 System 模块 me.zhengjie 不一样，那么需要在 AppRun.class 中配置扫描路径
@@ -30,17 +30,17 @@ comment: false
 
 给新模块起一个名字
 
-![](https://img.el-admin.xin/20200606134512.png)
+![](https://img.el-admin.vip/images/2020/06/25/20200606134512.png)
 
 最后在 System 模块的 pom.xml 的 dependencies 节点加入创建的子模块
 
-![](https://img.el-admin.xin/20200606134610.png)
+![](https://img.el-admin.vip/images/2020/06/25/20200606134610.png)
 
 ## 权限控制
 本系统权限控制采用 `RBAC` 思想。简单地说，一个用户拥有若干角色，每一个角色拥有若干个菜单，菜单中存在菜单权限与按钮权限，
 这样，就构造成“用户-角色-菜单” 的授权模型。在这种模型中，用户与角色、角色与菜单之间构成了多对多的关系，如下图
 
-![](https://img.el-admin.xin/20200605134807.png)
+![](https://img.el-admin.vip/images/2020/06/25/20200605134807.png)
 
 ### 权限控制
 本系统安全框架使用的是 ```Spring Security + Jwt Token```，
@@ -55,7 +55,7 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU1ODk2N
 用户登录 -> 后端验证登录返回 ```token``` -> 前端带上```token```请求后端数据 -> 后端返回数据，
 数据交互流程如下：
 
-![](https://img.el-admin.xin/20200605142356.png)
+![](https://img.el-admin.vip/images/2020/06/25/20200605142356.png)
 
 ###  权限注解
 ```Spring Security``` 提供了```Spring EL```表达式，允许我们在定义接口访问的方法上面添加注解，来控制访问权限，常用的 ```EL```如下
@@ -613,9 +613,9 @@ eladmin-common -> me.zhengjie.base
 
 ## 服务监控
 
-![](https://img.el-admin.xin/20200605155951.png)
+![](https://img.el-admin.vip/images/2020/06/25/20200605155951.png)
 
-![](https://img.el-admin.xin/20200605160022.png)
+![](https://img.el-admin.vip/images/2020/06/25/20200605160022.png)
 
 ## 运维管理
 
@@ -800,4 +800,4 @@ private final static ThreadPoolExecutor executor = ThreadPoolExecutorUtil.getPol
 
 #### 目录如下
 
-![](https://img.el-admin.xin/20200605160509.png)
+![](https://img.el-admin.vip/images/2020/06/25/20200605160509.png)
