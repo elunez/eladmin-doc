@@ -154,6 +154,91 @@ http://download.eclipse.org/technology/m2e/releases
 
 Eclipse 初次使用，因此此教程仅供参考，如果有更好的方案，可以编辑此页面，提个 Pr ！
 
+### 后端开发方案
+
+本系统框架开发的主要目的是让开发者专注于业务，降低技术难度，从而节省人力成本，缩短项目周期，提高软件安全质量。
+
+在克隆好本系统后，小伙伴们要开始继续业务开发了，目前比较被大家所认可的基于本系统框架的开发模式：
+
+1. 基本不改动项目结构，直接在`eladmin-system`模块中，参照现有功能继续开发自己的业务
+
+   ```
+   其他模块略
+   - eladmin-system 系统核心模块（系统启动入口）
+   	- config 配置跨域与静态资源，与数据权限
+   	    - thread 线程池相关
+   	- modules 系统相关模块(登录授权、系统监控、定时任务、运维管理等)
+   		- mnt
+   		- quartz
+   		- security
+   		- system
+   		- 你自己的业务模块	
+   ```
+
+2. `eladmin`原有模块不动，在此父工程的基础上继续添加新的子模块，开发自己的业务
+
+   ```
+   - eladmin-common 公共模块
+   - eladmin-system 系统核心模块（系统启动入口）
+   - eladmin-logging 系统日志模块
+   - eladmin-tools 系统第三方工具模块
+   - eladmin-generator 系统代码生成模块
+   - 你的项目名-模块名 你自己的业务模块，参照system/logging/generator的开发模式
+   ```
+
+3. 完全改动`eladmin`的项目名、模块名、甚至是包名，然后继续添加子模块，开发自己的业务
+
+   ```
+   - 你的项目名-common 公共模块
+   - 你的项目名-system 系统核心模块（系统启动入口）
+   - 你的项目名-logging 系统日志模块
+   - 你的项目名-tools 系统第三方工具模块
+   - 你的项目名-generator 系统代码生成模块
+   - 你的项目名-模块名 你自己的业务模块，参照system/logging/generator的开发模式
+   ```
+
+其中第2种和第3种开发模式，大概率会面临2个问题：
+
+1. 依然使用`eladmin-system`作为启动和打包项目吗？
+
+   大多数使用者都会将启动和打包项目替换为自己的业务模块
+
+   ```
+   - eladmin-common 公共模块
+   - eladmin-system 系统核心模块（系统启动入口）
+   - eladmin-logging 系统日志模块
+   - eladmin-tools 系统第三方工具模块
+   - eladmin-generator 系统代码生成模块
+   - 你的项目名-模块名 你自己的业务模块，参照system/logging/generator的开发模式
+   - 你的项目名-模块名 用于作为启动和打包项目
+   	将system模块的AppRun和配置文件迁移过来，并且将system模块的pom.xml中的打包插件也迁移过去
+   ```
+
+   这种方式设置好后，你就可以随意将现有系统模块和你自己的业务模块相互依赖，而无需担心Maven循环依赖的产生。
+
+2. 残留了部分`eladmin`原有包名后，SpringBoot如何扫描不同名包下的组件？
+
+   SpringBoot的核心注解`@SpringBootApplication`是默认扫描当前包和子包的，如果未来你存在需要扫描不同包名的情况，那就需要你在启动类`AppRun`中添加如下三个注解了，单独添加一个`@ComponentScan`会被SpringBoot默认的扫描覆盖掉。
+
+   ```java
+   @ApiIgnore
+   @EnableAsync
+   @RestController
+   @SpringBootApplication
+   // 组件扫描
+   @ComponentScan(basePackages={"me.zhengjie", "你自己要扫描的包名"})
+   // jpa扫描
+   @EnableJpaRepositories(basePackages={"me.zhengjie"})
+   // 实体扫描
+   @EntityScan(basePackages={"me.zhengjie"})
+   @EnableTransactionManagement
+   @EnableJpaAuditing(auditorAwareRef = "auditorAware")
+   public class AppRun {}
+   ```
+
+以上就是现存使用较多的开发方案，诸君自行品鉴，欢迎完善。
+
+
 ### 前端运行[WebStorm]
 
 首先克隆项目到本地，Mac 使用终端、Windows 使用 Cmd，定位到工作的目录
