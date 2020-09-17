@@ -1,7 +1,3 @@
----
-comment: false 
----
-
 # 贡献代码
 欢迎任何人为 EL-ADMIN 添砖加瓦，贡献代码，需要提交的pr（pull request）需要符合一些规范
 ## PR原则

@@ -16,5 +16,4 @@ features:
   details: 支持电脑、平板、手机等所有主流设备访问。
 - title: 易用性
   details: 几乎可用于所有Web项目的开发，如 OA、Cms，网址后台管理等。
-footer:  Apache License 2.0 | Copyright © 2018-present Zheng Jie
 ---

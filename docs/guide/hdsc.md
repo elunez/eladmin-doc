@@ -1,7 +1,3 @@
----
-comment: false 
----
-
 # 后端手册
 ## 项目模块
 这里演示使用 Idea 创建一个新的子模块
@@ -679,16 +675,6 @@ nohup java -jar eladmin-monitor-2.4.jar >nohup.out 2>&1 &
 ![QQ截图20191222131316.png](https://i.loli.net/2019/12/22/kI1uxbnmKFS4JEf.png)
 
 ![QQ截图20191222131408.png](https://i.loli.net/2019/12/22/bWLjREBy1eMQ2Gi.png)
-
-## 免费图床
-
-图床使用的是 https://sm.ms/ ,现已支持同步操作
-
-![QQ截图20191222114022.png](https://i.loli.net/2019/12/22/kegPjTHiKzWp9XO.png)
-
-需要我们在 https://sm.ms/ 中注册账号，然后将 token 配置进项目，就能实现同步功能
-
-![QQ截图20191222131634.png](https://i.loli.net/2019/12/22/Tt71EPZbIjR8Aw2.png)
 
 ## 异步线程池
 

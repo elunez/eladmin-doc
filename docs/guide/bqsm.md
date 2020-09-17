@@ -1,7 +1,3 @@
----
-comment: false 
----
-
 # 版权说明
 本项目使用 [ Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) 协议，请严格遵照协议内容
 1. 如果你修改了代码，需要在被修改的文件中说明。

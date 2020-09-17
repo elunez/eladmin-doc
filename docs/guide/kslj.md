@@ -1,7 +1,3 @@
----
-comment: false 
----
-
 # 快速了解
 ## 项目简介
 EL-ADMIN 基于 Spring Boot 2.1.0 、 Spring Boot Jpa、 JWT、Spring Security、Redis、Vue、Element-UI 的前后端分离的后台管理系统，
@@ -31,7 +27,6 @@ EL-ADMIN 基于 Spring Boot 2.1.0 、 Spring Boot Jpa、 JWT、Spring Security�
 - 定时任务：整合Quartz做定时任务，加入任务日志，任务运行情况一目了然
 - 代码生成：高灵活度生成前后端代码，减少大量重复的工作任务
 - 邮件工具：配合富文本，发送html格式的邮件
-- 免费图床：使用sm.ms图床，用作公共图片上传使用，该图床不怎么稳定，不太建议使用
 - 七牛云存储：可同步七牛云存储的数据到系统，无需登录七牛云直接操作云数据
 - 支付宝支付：整合了支付宝支付并且提供了测试账号，可自行测试
 - 服务监控：监控服务器的负载情况

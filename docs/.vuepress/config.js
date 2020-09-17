@@ -9,6 +9,7 @@ module.exports = {
         ['link', { rel: 'icon', href: '/logo/small.png' }]
     ],
     // 网站标题及描述
+    theme: 'reco',
     title: 'EL-ADMIN',
     description: '一个简单且易上手的 Spring boot 后台管理框架',
     // 主题配置
@@ -18,13 +19,20 @@ module.exports = {
         // 文档更新时间
         lastUpdated: '更新时间',
         // logo
+        subSidebar: 'auto',
         logo: '/logo/small.png',
+        author: 'ZhengJie',
+        // 备案
+        record: '浙ICP备18005431号',
+        recordLink: 'https://beian.miit.gov.cn/#/Integrated/index',
+        // 项目开始时间，只填写年份
+        startYear: '2018',
         nav: [
-            { text: '指南', link: '/guide/'},
-            { text: '日志', link: '/version/V2.5/'},
-            { text: '捐赠', link: '/donation/'},
-            { text: '体验', link: 'https://el-admin.xin'},
-            { text: '博客', link: 'https://www.ydyno.com/'},
+            { text: '项目指南', link: '/guide/', icon: 'reco-document'},
+            { text: '常见问题', link: '/problem/', icon: 'reco-faq'},
+            { text: '更新日志', link: '/version/V2.6/', icon: 'reco-date'},
+            { text: '捐赠支持', link: '/donation/', icon: 'reco-account'},
+            { text: '体验地址', link: 'https://el-admin.xin', icon: 'reco-other'},
             // 下拉列表
             {
                 text: 'Github',
@@ -37,7 +45,8 @@ module.exports = {
                         text: '后端源码',
                         link: 'https://github.com/elunez/eladmin'
                     },
-                ]
+                ],
+                icon: 'reco-github'
             },
             {
                 text: 'Gitee',
@@ -50,7 +59,8 @@ module.exports = {
                         text: '后端源码',
                         link: 'https://gitee.com/elunez/eladmin'
                     }
-                ]
+                ],
+                icon: 'reco-mayun'
             }
         ],
         sidebar: {
@@ -71,14 +81,7 @@ module.exports = {
                     title: '其它',
                     collapsable: false,
                     children: [
-                        '/guide/cjwt',
-                        '/guide/gxdm'
-                    ]
-                },
-                {
-                    title: '版权',
-                    collapsable: false,
-                    children: [
+                        '/guide/gxdm',
                         '/guide/bqsm'
                     ]
                 },
@@ -93,11 +96,15 @@ module.exports = {
             '/donation/': [
                 '/donation/',
             ],
+            '/problem/': [
+                '/problem/',
+            ],
             '/version/': [
                 {
                     title: '更新日志',
                     collapsable: false,
                     children: [
+                        'V2.6',
                         'V2.5',
                         'V2.4'
                     ]

@@ -1,7 +1,3 @@
----
-comment: false 
----
-
 # 项目介绍
 <center><h1>EL-ADMIN 后台管理系统</h1></center>
 <center><p>一个基于 Spring Boot 2.1.0 、 Spring Boot Jpa、 JWT、Spring Security、Redis、Vue、Element-UI 的前后端分离的后台管理系统</p></center>
