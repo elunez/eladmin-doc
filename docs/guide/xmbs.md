@@ -215,7 +215,7 @@ docker run -d \
 -p 8000:8000 \
 -e "TZ=Asia/Shanghai" \
 -e DB_HOST=172.17.0.1 \
--e DB_PWD=dqjdda1996 \
+-e DB_PWD=mysql_pwd \
 -e REDIS_HOST=172.17.0.1 \
 -v /home/data/:/home/eladmin/ \
 eladmin
