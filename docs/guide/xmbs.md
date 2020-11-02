@@ -17,9 +17,9 @@ swagger:
 
 我们需要将项目打包好的 Jar 文件上传到服务器，步骤图如下：
 
-![image.png](https://img.el-admin.vip/images/2020/09/17/image.png)
+![image.png](https://img.el-admin.xin/images/2020/09/17/image.png)
 
-![image578bed89803bdfa9.png](https://img.el-admin.vip/images/2020/09/17/image578bed89803bdfa9.png)
+![image578bed89803bdfa9.png](https://img.el-admin.xin/images/2020/09/17/image578bed89803bdfa9.png)
 
 #### 编写脚本
 
@@ -73,23 +73,23 @@ server {
 ### 前端部署
 这里提供两个配置方式 [History、Hash] 的部署方式，首先修改接口地址，如果是 IP 地址，那么需要修改为外网 IP
 
-![](https://img.el-admin.vip/images/2020/06/25/20200605162316.png)
+![](https://img.el-admin.xin/images/2020/06/25/20200605162316.png)
 
 #### History 模式
 
 项目默认是 History 模式，不需要做任何修改
 
-![image4285f15c9c2dfa96.png](https://img.el-admin.vip/images/2020/09/17/image4285f15c9c2dfa96.png)
+![image4285f15c9c2dfa96.png](https://img.el-admin.xin/images/2020/09/17/image4285f15c9c2dfa96.png)
 
 #### Hash 模式
 
 ##### 1、修改 routers.js，取消 hash 的注释
 
-![image92197994858c5edd.png](https://img.el-admin.vip/images/2020/09/17/image92197994858c5edd.png)
+![image92197994858c5edd.png](https://img.el-admin.xin/images/2020/09/17/image92197994858c5edd.png)
 
 ##### 2、修改根目录 vue.config.js 配置，取消 15 行的注释
 
-![imagee7ae12491c445923.png](https://img.el-admin.vip/images/2020/09/17/imagee7ae12491c445923.png)
+![imagee7ae12491c445923.png](https://img.el-admin.xin/images/2020/09/17/imagee7ae12491c445923.png)
 
 #### 打包项目
 不管是将项目部署到 ```nginx``` 还是其他服务器，都需要先将项目打包
@@ -145,11 +145,11 @@ server {
 }
 ```
 文件目录
-![image](https://img.el-admin.vip/images/2020/06/25/CIyQda.png)
+![image](https://img.el-admin.xin/images/2020/06/25/CIyQda.png)
 
 注意目录名称要与配置名称一致
 
-![image](https://img.el-admin.vip/images/2020/06/25/PP6D6b.png)
+![image](https://img.el-admin.xin/images/2020/06/25/PP6D6b.png)
 
 ### 重启Nginx
 ```
@@ -168,7 +168,7 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun && systemctl 
 ```
 如果你机器是国内的机器，那么需要配置镜像加速，一般使用阿里云镜像加速 [阿里云加速官网](https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors)
 
-![imageb817a495226b07de.png](https://img.el-admin.vip/images/2020/09/17/imageb817a495226b07de.png)
+![imageb817a495226b07de.png](https://img.el-admin.xin/images/2020/09/17/imageb817a495226b07de.png)
 
 ### 安装Mysql与Redis
 
@@ -267,7 +267,7 @@ server
           rewrite ^.*$ /index.html last;
         }
 
-        # 授权
+        # 接口
         location /api {
           proxy_pass http://172.17.0.1:8000;
           proxy_set_header X-Forwarded-Proto $scheme;
@@ -277,8 +277,18 @@ server
           proxy_set_header Connection "upgrade";
         }
 
-        # 授权
+        # 授权接口
         location /auth {
+          proxy_pass http://172.17.0.1:8000;
+          proxy_set_header X-Forwarded-Proto $scheme;
+          proxy_set_header X-Forwarded-Port $server_port;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header Upgrade $http_upgrade;
+          proxy_set_header Connection "upgrade";
+        }
+
+        # WebSocket 服务
+        location /webSocket {
           proxy_pass http://172.17.0.1:8000;
           proxy_set_header X-Forwarded-Proto $scheme;
           proxy_set_header X-Forwarded-Port $server_port;
@@ -305,11 +315,11 @@ server
 
 1、将 `.env.production` 中的接口地址改为 `'/'`
 
-![imageb0806c848d01318e.png](https://img.el-admin.vip/images/2020/09/17/imageb0806c848d01318e.png)
+![imageb0806c848d01318e.png](https://img.el-admin.xin/images/2020/09/17/imageb0806c848d01318e.png)
 
 2、修改 `api.js` 中的 `baseUrl = process.env.VUE_APP_BASE_API === '/' ? '' : process.env.VUE_APP_BASE_API`
 
-![imagedcd151a815c62932.png](https://img.el-admin.vip/images/2020/09/17/imagedcd151a815c62932.png)
+![imagedcd151a815c62932.png](https://img.el-admin.xin/images/2020/09/17/imagedcd151a815c62932.png)
 
 3、打包项目并且上传到 `/home/nginx/html/eladmin` 目录下
 

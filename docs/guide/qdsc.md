@@ -72,7 +72,7 @@ meta: {
 
 外链菜单路由地址必须带上 `https://` 或者 `http://`，并且外链菜单选择 `是`
 
-![](https://img.el-admin.vip/images/2020/06/25/20200606135654.png)
+![](https://img.el-admin.xin/images/2020/06/25/20200606135654.png)
 
  #### (2) 内部菜单
 
@@ -91,7 +91,7 @@ meta: {
 
 创建完菜单还需要在角色管理中给角色分配菜单
 
-![](https://img.el-admin.vip/images/2020/06/25/20200606140433.png)
+![](https://img.el-admin.xin/images/2020/06/25/20200606140433.png)
 
 ### 权限控制
 可以引入权限判断函数或者使用全局指令函数实现前端的权限控制<br>
@@ -140,7 +140,7 @@ export default{
 
 在 index.vue 中找到下面节点，并且指定 idField， 由于系统默认是根据 id 字段降序，所以这里排序规则也需要修改
 
-![](https://img.el-admin.vip/images/2020/06/25/20200606142345.png)
+![](https://img.el-admin.xin/images/2020/06/25/20200606142345.png)
 
 ```vue
 cruds() {
@@ -151,7 +151,7 @@ cruds() {
 ## 多字段排序
 多字段排序方式在 crud.js 中的注释中说明了，这里再写个例子
 
-![](https://img.el-admin.vip/images/2020/06/25/20200606142345.png)
+![](https://img.el-admin.xin/images/2020/06/25/20200606142345.png)
 
 代码如下：
 
