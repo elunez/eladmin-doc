@@ -15,7 +15,7 @@ Consider defining a bean of type 'me.zhengjie.modules.system.service.mapper.User
 ```
 生成的实现类如下图
 
-![image477c529cdc640f06.png](https://img.el-admin.vip/images/2020/07/07/image477c529cdc640f06.png)
+![image477c529cdc640f06.png](https://img.el-admin.xin/images/2020/07/07/image477c529cdc640f06.png)
 
 ## 关于如何获取当前登录的用户
 可以使用工具 ```SecurityUtils``` 获取当前用户
