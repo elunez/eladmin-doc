@@ -197,12 +197,12 @@ public class QueryCriteria {
     @Query(type = Query.Type.IN)
     private List<String> d;
 
-    // 左关联查询，left Join ， joinName为关联实体名称
-    @Query(joinName = "")
+    // 左关联查询，left Join ， joinName为关联实体名称 , propName为关联实体 字段
+    @Query(joinName = "", propName="")
     private String e;
 
-    // 右关联查询，right Join ， joinName为关联实体名称
-    @Query(joinName = "", join = Query.Join.RIGHT)
+    // 右关联查询，right Join ， joinName为关联实体名称 , propName为关联实体 字段
+    @Query(joinName = "", propName="", join = Query.Join.RIGHT)
     private String f;
 
     // NOT_EQUAL 不等于
