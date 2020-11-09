@@ -45,5 +45,7 @@ Consider defining a bean of type 'me.zhengjie.modules.system.service.mapper.User
 而你新加的模块的包名与 `me.zhengjie` 不一致，没有被扫描到肯定是 404
 ## 关于如何使用```https```部署
 群文件有 ```https```的```ngnix```配置文件，可供参考，[百度](https://www.baidu.com/s?tn=02003390_43_hao_pg&isource=infinity&iname=baidu&itype=web&ie=utf-8&wd=ngnix%20https) 上也有很多教程的
+## 关于新增部门后数据不显示的问题
+2.6 版本中的超级管理员角色的数据权限设置的是自定义，修改为全部即可
 ## 如何反馈项目 Bug
 可在 [Issues](https://github.com/elunez/eladmin-docs/issues) 中留言，或者加群```891137268、947578238```进行反馈
