@@ -19,10 +19,13 @@ Consider defining a bean of type 'me.zhengjie.modules.system.service.mapper.User
 
 ## 关于如何获取当前登录的用户
 可以使用工具 ```SecurityUtils``` 获取当前用户
+
 ## 关于项目如何使用 MyBatis-Plus
 ```Jpa```和 ```Mybatis``` 是可以共存的，只需要将mybatis整合进去，原有的代码不动，新的业务使用mybatis即可
+
 ## 关于系统如何放行部分接口
 [匿名访问接口](https://el-admin.vip/guide/hdsc.html#%E6%8E%A5%E5%8F%A3%E6%9D%83%E9%99%90)
+
 ## 关于新增字段后出现的问题
 新增字段后容易出现 ```数据库中有数据，列表显示没有数据``` 这种错误，出现的原因可能是
 
@@ -33,6 +36,7 @@ Consider defining a bean of type 'me.zhengjie.modules.system.service.mapper.User
 3、新增字段后，redis中的数据并没有更新导致的
 
 对于这种问题，第一步：使用命令 ```mvn compile``` 更新```mapStruct``` 的实现类，第二步：```清空相应的缓存```即可https://docsify.js.org/#/zh-cn/)
+
 ## 新建模块后访问接口 404
 请检查你新建的模块包名是不是 `me.zhengjie`
 
@@ -43,7 +47,12 @@ Consider defining a bean of type 'me.zhengjie.modules.system.service.mapper.User
 因为 `springboot` 默认扫描规则是扫描启动器类的同包或者其子包的下的注解
 
 而你新加的模块的包名与 `me.zhengjie` 不一致，没有被扫描到肯定是 404
+
+## 关于新增部门后数据不显示的问题
+2.6 版本中的超级管理员角色的数据权限设置的是自定义，修改为全部即可
+
 ## 关于如何使用```https```部署
 群文件有 ```https```的```ngnix```配置文件，可供参考，[百度](https://www.baidu.com/s?tn=02003390_43_hao_pg&isource=infinity&iname=baidu&itype=web&ie=utf-8&wd=ngnix%20https) 上也有很多教程的
+
 ## 如何反馈项目 Bug
 可在 [Issues](https://github.com/elunez/eladmin-docs/issues) 中留言，或者加群```891137268、947578238```进行反馈
