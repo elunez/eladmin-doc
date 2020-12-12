@@ -38,15 +38,19 @@ Consider defining a bean of type 'me.zhengjie.modules.system.service.mapper.User
 对于这种问题，第一步：使用命令 ```mvn compile``` 更新```mapStruct``` 的实现类，第二步：```清空相应的缓存```即可https://docsify.js.org/#/zh-cn/)
 
 ## 新建模块后访问接口 404
+
 请检查你新建的模块包名是不是 `me.zhengjie`
 
 如果不是，那么需要在 system 模块中的 AppRun 中配置注解
-如果仅仅只写 @ComponentScan({"com.demo.*"}) 
-将导致 me.zhengjie 包下的类无法被扫描到（框架原始的默认扫描效果无效了）
 
 ```java
+// com.demo.* 改为你自己定义的包名
 @componentscan({"me.zhengjie.*","com.demo.*"})
 ```
+
+如果仅仅只写 @ComponentScan({"com.demo.*"}) 
+
+将导致 me.zhengjie 包下的类无法被扫描到（框架原始的默认扫描效果无效了）
 
 因为 `springboot` 默认扫描规则是扫描启动器类的同包或者其子包的下的注解
 
