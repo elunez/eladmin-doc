@@ -41,9 +41,13 @@ Consider defining a bean of type 'me.zhengjie.modules.system.service.mapper.User
 请检查你新建的模块包名是不是 `me.zhengjie`
 
 如果不是，那么需要在 system 模块中的 AppRun 中配置注解
+如果仅仅只写 @ComponentScan({"com.demo.*"}) 
+将导致 me.zhengjie 包下的类无法被扫描到（框架原始的默认扫描效果无效了）
+
 ```java
-@ComponentScan(basePackages = {"**.**.rest"})
+@componentscan({"me.zhengjie.*","com.demo.*"})
 ```
+
 因为 `springboot` 默认扫描规则是扫描启动器类的同包或者其子包的下的注解
 
 而你新加的模块的包名与 `me.zhengjie` 不一致，没有被扫描到肯定是 404
