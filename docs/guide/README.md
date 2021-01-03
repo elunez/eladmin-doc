@@ -37,4 +37,4 @@
 QQ交流群：一群：<strike>891137268</strike>、二群：947578238
 
 ### 加群问题
-Ios 和 Mac 可能会存在加不了群的情况，请更换成 Android 或者 window 系统加入
+iOS 和 macOS 可能会存在加不了群的情况，请更换成 Android 或者 Windows 系统加入
