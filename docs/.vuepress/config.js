@@ -33,6 +33,7 @@ module.exports = {
             { text: '更新日志', link: '/version/V2.6/', icon: 'reco-date'},
             { text: '捐赠支持', link: '/donation/', icon: 'reco-account'},
             { text: '体验地址', link: 'https://el-admin.xin', icon: 'reco-other'},
+            { text: '作者博客', link: 'https://www.ydyno.com', icon: 'reco-bokeyuan'},
             // 下拉列表
             {
                 text: 'Github',
