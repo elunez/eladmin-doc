@@ -10,7 +10,7 @@ module.exports = {
     ],
     // 网站标题及描述
     theme: 'reco',
-    title: 'EL-ADMIN',
+    title: '个人学习文档',
     description: '一个简单且易上手的 Spring boot 后台管理框架',
     // 主题配置
     themeConfig: {
@@ -23,8 +23,8 @@ module.exports = {
         logo: '/logo/small.png',
         author: 'ZhengJie',
         // 备案
-        record: '浙ICP备18005431号',
-        recordLink: 'https://beian.miit.gov.cn/#/Integrated/index',
+        record: '浙ICP备18005431号-7',
+        recordLink: 'https://beian.miit.gov.cn',
         // 项目开始时间，只填写年份
         startYear: '2018',
         nav: [
