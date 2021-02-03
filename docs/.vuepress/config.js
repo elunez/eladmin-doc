@@ -6,7 +6,19 @@ module.exports = {
     // 头部
     head: [
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
-        ['link', { rel: 'icon', href: '/logo/small.png' }]
+        ['link', { rel: 'icon', href: '/logo/small.png' }],
+        [
+            "script",
+            {}, `
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?6e843bf2bccfd3a2bf5e09f39934028a";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();`
+        ]
+
     ],
     // 网站标题及描述
     theme: 'reco',
