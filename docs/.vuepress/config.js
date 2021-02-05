@@ -1,8 +1,16 @@
 module.exports = {
     // 插件
-    plugins: {
-        '@vuepress/back-to-top': {}
-    },
+    plugins: [
+        [
+            "vuepress-plugin-google-adsense",
+            {
+                ad_client: "ca-pub-3964897280370772"
+            }
+        ],
+        [
+            '@vuepress/back-to-top', {}
+        ]
+    ],
     // 头部
     head: [
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
@@ -16,7 +24,8 @@ module.exports = {
               hm.src = "https://hm.baidu.com/hm.js?6e843bf2bccfd3a2bf5e09f39934028a";
               var s = document.getElementsByTagName("script")[0]; 
               s.parentNode.insertBefore(hm, s);
-            })();`
+            })();
+            `
         ]
 
     ],
