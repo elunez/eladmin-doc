@@ -48,7 +48,8 @@ module.exports = {
     ],
     // 网站标题及描述
     theme: 'reco',
-    title: 'EL-ADMIN',
+    title: '个人学习文档',
+    // title: 'EL-ADMIN',
     description: '一个简单且易上手的 Spring boot 后台管理框架',
     // 主题配置
     themeConfig: {
