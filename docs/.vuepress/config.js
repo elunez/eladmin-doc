@@ -40,40 +40,26 @@ module.exports = {
         // 项目开始时间，只填写年份
         startYear: '2018',
         nav: [
-            { text: '项目指南', link: '/guide/', icon: 'reco-document'},
-            { text: '常见问题', link: '/problem/', icon: 'reco-faq'},
-            { text: '更新日志', link: '/version/V2.6/', icon: 'reco-date'},
-            { text: '捐赠支持', link: '/donation/', icon: 'reco-account'},
-            { text: '体验地址', link: 'https://el-admin.xin', icon: 'reco-other'},
-            { text: '作者博客', link: 'https://www.ydyno.com', icon: 'reco-bokeyuan'},
+            { text: '指南', link: '/guide/', icon: 'reco-document'},
+            { text: '问题', link: '/problem/', icon: 'reco-faq'},
+            { text: '日志', link: '/version/V2.6/', icon: 'reco-date'},
+            { text: '捐赠', link: '/donation/', icon: 'reco-account'},
+            { text: '体验', link: 'https://el-admin.xin', icon: 'reco-other'},
+            { text: '博客', link: 'https://www.ydyno.com', icon: 'reco-bokeyuan'},
             // 下拉列表
             {
-                text: 'Github',
+                text: '源码',
                 items: [
                     {
-                        text: '前端源码',
-                        link: 'https://github.com/elunez/eladmin-web'
-                    },
-                    {
-                        text: '后端源码',
+                        text: 'Github',
                         link: 'https://github.com/elunez/eladmin'
                     },
-                ],
-                icon: 'reco-github'
-            },
-            {
-                text: 'Gitee',
-                items: [
                     {
-                        text: '前端源码',
-                        link: 'https://gitee.com/elunez/eladmin-web'
-                    },
-                    {
-                        text: '后端源码',
+                        text: 'Gitee',
                         link: 'https://gitee.com/elunez/eladmin'
                     }
                 ],
-                icon: 'reco-mayun'
+                icon: 'reco-github'
             }
         ],
         sidebar: {
