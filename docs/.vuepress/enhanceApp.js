@@ -1,11 +1,6 @@
-export default ({
-                  Vue,
-                  options,
-                  router,
-                  siteData
-                }) => {
+export default ({ router, Vue }) => {
   /**
-   * 路由切换事件处理
+   * 路由切换
    */
   router.beforeEach((to, from, next) => {
     //触发百度的pv统计
@@ -16,6 +11,10 @@ export default ({
     }
     next();
   });
+
+  /**
+   * 谷歌广告
+   */
   if (typeof window !== 'undefined') {
     import('vue-google-adsense')
         .then(module => {
