@@ -163,6 +163,13 @@ systemctl restart nginx
 
 我一般习惯将 home 目录作为工作目录，因此 Docker 挂载的文件也都会存放在 home 目录中
 
+<div>
+<InArticleAdsense
+    data-ad-client="ca-pub-3964897280370772"
+    data-ad-slot="8192154900">
+</InArticleAdsense>
+</div>
+
 ### 安装Docker
 ```
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun && systemctl start docker && systemctl enable docker
