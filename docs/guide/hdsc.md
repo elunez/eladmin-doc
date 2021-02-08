@@ -110,6 +110,13 @@ public class ElPermissionConfig {
 
 在我们使用的时候，有写接口是不需要验证权限，这个时候就需要我们给接口放行，使用方式如下
 
+<div>
+<InArticleAdsense
+    data-ad-client="ca-pub-3964897280370772"
+    data-ad-slot="8192154900">
+</InArticleAdsense>
+</div>
+
 **1、使用注解方式**
 
 只需要在Controller的方法上加入该注解即可
@@ -270,6 +277,14 @@ public Object queryAll(QueryCriteria criteria, Pageable pageable){
 这些异常如果不经过处理会对前端开发人员和使用者造成不便，因此我们就需要统一处理他们。
 
 源码位于：源码位于：``` eladmin-common ``` 模块中的 `exception` 包中
+
+
+<div>
+<InArticleAdsense
+    data-ad-client="ca-pub-3964897280370772"
+    data-ad-slot="8192154900">
+</InArticleAdsense>
+</div>
 
 ### 异常封装
 
@@ -527,6 +542,14 @@ public @interface DataPermission {
 可参考 DeptQueryCriteria.class 中的写法，底层实现 QueryHelp.class 中的 42 行
 ## 定时任务
 对于简单的定时任务用 ```Spring```的 ```@Scheduled``` 注解即可，如需要动态管理定时任务就需要使用到 ```Quartz```。本系统的动态定时任务源码位于 ``` eldamin-system -> modules -> quartz ```，使用流程如下
+
+<div>
+<InArticleAdsense
+    data-ad-client="ca-pub-3964897280370772"
+    data-ad-slot="8192154900">
+</InArticleAdsense>
+</div>
+
 ### 任务处理类
 ```java
 @Slf4j
@@ -762,6 +785,14 @@ public class AsyncTaskExecutePool implements AsyncConfigurer {
 ## 线程池工具类
 
  通过该工具类可以快速创建一个线程池，目前在 定时任务模块中使用到 ，代码地址： 
+ 
+ 
+<div>
+<InArticleAdsense
+    data-ad-client="ca-pub-3964897280370772"
+    data-ad-slot="8192154900">
+</InArticleAdsense>
+</div>
 
 ```
 eladmin-system -> me.zhengjie.config.ThreadPoolExecutorUtil

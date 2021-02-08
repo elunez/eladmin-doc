@@ -68,6 +68,13 @@ meta: {
 ### 动态菜单
 本项目的动态菜单支持到 ```4级``` 菜单，支持 ```外链```，支持```自定义图标```，添加教程如下：
 
+<div>
+<InArticleAdsense
+    data-ad-client="ca-pub-3964897280370772"
+    data-ad-slot="8192154900">
+</InArticleAdsense>
+</div>
+
 ####  (1) 添加外链
 
 外链菜单路由地址必须带上 `https://` 或者 `http://`，并且外链菜单选择 `是`
@@ -270,6 +277,13 @@ export default {
 上传文件时接口都是需要带上 Token 才能访问的，因此需要组件支持 Header 配置，详细代码见
 
 `tools->picture->index.vue`
+
+<div>
+<InArticleAdsense
+    data-ad-client="ca-pub-3964897280370772"
+    data-ad-slot="8192154900">
+</InArticleAdsense>
+</div>
 
 ### 获取Token
 
