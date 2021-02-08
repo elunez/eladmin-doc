@@ -8,5 +8,11 @@
 - 前端默认（tab）缩进为`2`个空格，后端默认（tab）缩进为`4`个空格
 - 前端应尽量避免 `eslint` 报错
 
- [手把手教你贡献代码](https://www.cnblogs.com/wenber/p/3630921.html)
+[手把手教你贡献代码](https://www.cnblogs.com/wenber/p/3630921.html)
 
+<div>
+<InArticleAdsense
+    data-ad-client="ca-pub-3964897280370772"
+    data-ad-slot="8192154900">
+</InArticleAdsense>
+</div>
