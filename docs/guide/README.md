@@ -38,3 +38,10 @@ QQ交流群：一群：<strike>891137268</strike>、二群：947578238
 
 ### 加群问题
 iOS 和 macOS 可能会存在加不了群的情况，请更换成 Android 或者 Windows 系统加入
+
+<div>
+<InArticleAdsense
+    data-ad-client="ca-pub-3964897280370772"
+    data-ad-slot="8192154900">
+</InArticleAdsense>
+</div>

@@ -201,3 +201,10 @@ linux：直接使用 vi ~/.npmrc
 1. 单独安装：npm install --unsafe-perm node-sass 
 2. 直接使用：npm install --unsafe-perm
 ```
+
+<div>
+<InArticleAdsense
+    data-ad-client="ca-pub-3964897280370772"
+    data-ad-slot="8192154900">
+</InArticleAdsense>
+</div>

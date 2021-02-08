@@ -366,3 +366,10 @@ service.interceptors.response.use(
 - CodeMirror：[使用文档](https://github.com/codemirror/CodeMirror)
 - 富文本：[使用文档](https://www.kancloud.cn/wangfupeng/wangeditor3/332599)
 - Markdown：[使用文档](https://github.com/hinesboy/mavonEditor)
+
+<div>
+<InArticleAdsense
+    data-ad-client="ca-pub-3964897280370772"
+    data-ad-slot="8192154900">
+</InArticleAdsense>
+</div>
