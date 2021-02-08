@@ -33,7 +33,7 @@ module.exports = {
         ],
         ['script', { src: "https://www.googletagmanager.com/gtag/js?id=G-QTTKDL6ST0",async: true}],
 
-        // ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" ,async: true}],
+        ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" ,async: true}],
         ['script', {},
             '(adsbygoogle = window.adsbygoogle || []).push({});'
         ],
