@@ -38,9 +38,20 @@ module.exports = {
             'setTimeout(function() {\n' +
             'let script = document.createElement("script");\n' +
             'script.setAttribute("async", "");\n' +
+            'script.setAttribute("data-ad-client", "ca-pub-3964897280370772");\n' +
             'script.src = "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";\n' +
             'document.body.appendChild(script);\n' +
-            '}, 2e3);\n' +
+            '}, 1000);\n' +
+            '}'
+        ],
+        ['script', {},
+            'window.onload = function() {\n' +
+            'setTimeout(function() {\n' +
+            'let script = document.createElement("script");\n' +
+            'script.setAttribute("async", "");\n' +
+            'script.src = "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";\n' +
+            'document.body.appendChild(script);\n' +
+            '}, 1000);\n' +
             '}'
         ],
         ['script', {},
