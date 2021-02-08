@@ -33,24 +33,10 @@ module.exports = {
         ],
         ['script', { src: "https://www.googletagmanager.com/gtag/js?id=G-QTTKDL6ST0",async: true}],
 
-        ['script', {},
-            'window.onload = function() {\n' +
-            'setTimeout(function() {\n' +
-            'let script = document.createElement("script");\n' +
-            'script.setAttribute("async", "");\n' +
-            'script.src = "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";\n' +
-            'document.body.appendChild(script);\n' +
-            '}, 1500);\n' +
-            '}'
-        ],
+        ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" ,async: true}],
         ['script', {},
             '(adsbygoogle = window.adsbygoogle || []).push({});'
-        ]
-        ,
-        // ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" ,async: true}],
-        // ['script', {},
-        //     '(adsbygoogle = window.adsbygoogle || []).push({});'
-        // ],
+        ],
         [
             "script",
             {
