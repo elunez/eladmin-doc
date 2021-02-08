@@ -148,6 +148,13 @@ protected void configure(HttpSecurity httpSecurity) throws Exception {
 
 复杂查询：`包含（IN）查询、左连接、右连接等`
 
+<div>
+<InArticleAdsense
+    data-ad-client="ca-pub-3964897280370772"
+    data-ad-slot="8192154900">
+</InArticleAdsense>
+</div>
+
 ### 参数说明
 
 | 字段名称 | 字段描述                                             | 默认值 |
@@ -463,6 +470,14 @@ public ResponseEntity create(@Validated @RequestBody User resources){
 本系统是基于部门做的一个简单数据权限控制，也就是通过用户角色中的数据权限控制用户能看哪些数据。
 
 实现思路就是通过获取角色中关联的部门ID，再通过 IN 查询，达到数据权限控制，前提是被查询的表中需要有 部门ID 的字段。
+
+<div>
+<InArticleAdsense
+    data-ad-client="ca-pub-3964897280370772"
+    data-ad-slot="8192154900">
+</InArticleAdsense>
+</div>
+
 ### 注解方式
 
 现可通过注解 `@DataPermission` 进行权限控制
@@ -555,7 +570,16 @@ public class TestTask {
 "0 15 10 ? * 6#3" 每月的第三个星期五上午10:15触发
 ```
 ## 代码生成
+
 本系统提供高灵活度的代码生成功能，只需要在数据库中设计好表结构，就能一键生成前后端代码，是不是很nice，使用流程如下
+
+<div>
+<InArticleAdsense
+    data-ad-client="ca-pub-3964897280370772"
+    data-ad-slot="8192154900">
+</InArticleAdsense>
+</div>
+
 ###  表结构设计
 1. 配置主键（字符串或者整形皆可，整形可不设置自增）
 2. 可以设计字段是否为空（会根据这个进行表单验证）
