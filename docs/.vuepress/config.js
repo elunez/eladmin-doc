@@ -49,6 +49,14 @@ module.exports = {
             '(adsbygoogle = window.adsbygoogle || []).push({\
             google_ad_client: "ca-pub-000000000000",\
             enable_page_level_ads: true});'
+        ],
+        [
+            "script",
+            {
+                "data-ad-client": "ca-pub-3964897280370772",
+                async: true,
+                src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+            }
         ]
 
     ],
