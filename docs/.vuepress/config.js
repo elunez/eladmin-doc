@@ -21,35 +21,23 @@ module.exports = {
             })();
             `
         ],
+
         [
             "script",
             {}, `
             window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-            
               gtag('config', 'G-QTTKDL6ST0');
             `
         ],
-        [
-            "script",
-            {
-                async: true,
-                src: "https://www.googletagmanager.com/gtag/js?id=G-QTTKDL6ST0"
-            }
-        ],
-        ['script', { src: "https://www.googletagmanager.com/gtag/js?id=UA-000000000-1",async: true}],
-        ['script', {},
-            " window.dataLayer = window.dataLayer || [];\
-            function gtag(){dataLayer.push(arguments);}\
-            gtag('js', new Date());\
-            gtag('config', 'UA-000000000-1');"],
+        ['script', { src: "https://www.googletagmanager.com/gtag/js?id=G-QTTKDL6ST0",async: true}],
+
         ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" ,async: true}],
         ['script', {},
-            '(adsbygoogle = window.adsbygoogle || []).push({\
-            google_ad_client: "ca-pub-000000000000",\
-            enable_page_level_ads: true});'
+            '(adsbygoogle = window.adsbygoogle || []).push({});'
         ],
+
         [
             "script",
             {
