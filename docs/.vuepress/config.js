@@ -33,20 +33,19 @@ module.exports = {
         ],
         ['script', { src: "https://www.googletagmanager.com/gtag/js?id=G-QTTKDL6ST0",async: true}],
 
-        ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" ,async: true}],
+        ['script', {},
+            'window.onload = function() {\n' +
+            'setTimeout(function() {\n' +
+            'let script = document.createElement("script");\n' +
+            'script.setAttribute("async", "");\n' +
+            'script.src = "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";\n' +
+            'document.body.appendChild(script);\n' +
+            '}, 2e3);\n' +
+            '}'
+        ],
         ['script', {},
             '(adsbygoogle = window.adsbygoogle || []).push({});'
         ],
-
-        [
-            "script",
-            {
-                "data-ad-client": "ca-pub-3964897280370772",
-                async: true,
-                src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-            }
-        ]
-
     ],
     // 网站标题及描述
     theme: 'reco',
