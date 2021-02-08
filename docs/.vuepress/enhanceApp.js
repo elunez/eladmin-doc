@@ -23,9 +23,6 @@ export default ({ router, Vue }) => {
           Vue.use(Ads.Adsense)
           Vue.use(Ads.InArticleAdsense)
           Vue.use(Ads.InFeedAdsense)
-        })
-        .catch(e => {
-          console.log(e)
-        })
+        }).catch(() => {})
   }
 }
