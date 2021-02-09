@@ -18,7 +18,12 @@ export default ({router}) => {
         _hmt.push(["_trackPageview", to.fullPath]);
       }
     }
-
+    // let paras = document.getElementsByClassName('adswrapper');
+    // for(var i = 0; i<paras.length; i++){
+    //   //删除元素 元素.parentNode.removeChild(元素);
+    //   if (paras[i] != null)
+    //     paras[i].parentNode.removeChild( paras[i]);
+    // }
     next();
   });
 }
