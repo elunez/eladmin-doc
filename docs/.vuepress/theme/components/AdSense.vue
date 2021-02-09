@@ -1,8 +1,8 @@
 <template>
   <div class="adsense-content">
-    <div class="adsense-title"></div>
+    <div class="adsense-title">AD</div>
     <div style="padding: 0 1.5rem;">
-      <Adsense data-ad-client="ca-pub-3964897280370772" data-ad-slot="8192154900" />
+      <Adsense data-ad-client="ca-pub-3964897280370772" data-ad-slot="9196360798" />
     </div>
   </div>
 </template>
