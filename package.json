@@ -5,6 +5,7 @@
   "author": "Zheng Jie",
   "license": "Apache-2.0",
   "devDependencies": {
+    "@vuepress/plugin-active-header-links": "^1.8.0",
     "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
     "vue-google-adsense": "^1.9.2",
     "vue-script2": "^2.1.0",
@@ -13,8 +14,5 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
-  },
-  "dependencies": {
-    "vuepress-theme-reco": "^1.6.1"
   }
 }
