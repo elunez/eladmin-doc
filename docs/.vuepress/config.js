@@ -104,8 +104,7 @@ module.exports = {
                     collapsable: false,
                     children: [
                         'V2.6',
-                        'V2.5',
-                        'V2.4'
+                        'V2.5'
                     ]
                 }
             ]
