@@ -12,26 +12,23 @@ export default ({router}) => {
    * 路由切换
    */
   router.beforeEach((to, from, next) => {
-
-    Vue
-
     //触发百度的pv统计
     if (typeof _hmt != "undefined") {
       if (to.path) {
         _hmt.push(["_trackPageview", to.fullPath]);
-        let paras = document.getElementsByClassName('adswrapper');
-        for(let i = 0; i < paras.length; i++){
-          if (paras[i] != null){
-            paras[i].innerHTML = '';
-            paras[i].innerHTML = '<ins class="adsbygoogle"\n' +
-                '             style="display:block; text-align:center;"\n' +
-                '             data-ad-layout="in-article"\n' +
-                '             data-ad-format="fluid"\n' +
-                '             data-ad-client="ca-pub-3964897280370772"\n' +
-                '             data-ad-slot="8192154900"/>';
-            (window.adsbygoogle || []).push({});
-          }
-        }
+      }
+    }
+    let paras = document.getElementsByClassName('adswrapper');
+    for(let i = 0; i < paras.length; i++){
+      if (paras[i] != null){
+        paras[i].innerHTML = '';
+        paras[i].innerHTML = '<ins class="adsbygoogle"\n' +
+            '             style="display:block; text-align:center;"\n' +
+            '             data-ad-layout="in-article"\n' +
+            '             data-ad-format="fluid"\n' +
+            '             data-ad-client="ca-pub-3964897280370772"\n' +
+            '             data-ad-slot="8192154900"/>';
+        (window.adsbygoogle || []).push({});
       }
     }
     next();
