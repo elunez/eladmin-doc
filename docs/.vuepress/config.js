@@ -31,21 +31,7 @@ module.exports = {
               gtag('config', 'G-QTTKDL6ST0');
             `
         ],
-        ['script', { src: "https://www.googletagmanager.com/gtag/js?id=G-QTTKDL6ST0",async: true}],
-
-        [
-            "script",
-            {
-                "data-ad-client": "ca-pub-3964897280370772",
-                async: true,
-                src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-            }
-        ]
-
-        // ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" ,async: true}],
-        // ['script', {},
-        //     '(adsbygoogle = window.adsbygoogle || []).push({});'
-        // ]
+        ['script', { src: "https://www.googletagmanager.com/gtag/js?id=G-QTTKDL6ST0",async: true}]
     ],
     // 网站标题及描述
     theme: 'reco',
