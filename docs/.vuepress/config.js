@@ -45,11 +45,6 @@ module.exports = {
         subSidebar: 'auto',
         logo: '/logo/small.png',
         author: 'ZhengJie',
-        // 备案
-        record: '浙ICP备18005431号-7',
-        recordLink: 'https://beian.miit.gov.cn',
-        // 项目开始时间，只填写年份
-        startYear: '2018',
         nav: [
             { text: '开发指南', link: '/guide/'},
             { text: '常见问题', link: '/problem/'},
