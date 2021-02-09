@@ -24,9 +24,9 @@ module.exports = {
             "script",
             {},
             `
-            window.οnlοad=function(){
-               document.getElementsByClassName('footer').innerHTML = '© ZhengJie 2018 - 2021 | <a href="https://beian.miit.gov.cn" data-v-79f3f968="">浙ICP备18005431号-7</a>';
-            }
+            (function() {
+               document.getElementsByClassName('footer').innerHTML = '© ZhengJie 2018 - 2021 | <a href=\"https://beian.miit.gov.cn\" data-v-79f3f968=\"\">浙ICP备18005431号-7</a>';
+            })();
             `
         ]
 
