@@ -12,6 +12,9 @@ export default ({router}) => {
    * 路由切换
    */
   router.beforeEach((to, from, next) => {
+
+    Vue
+
     //触发百度的pv统计
     if (typeof _hmt != "undefined") {
       if (to.path) {
