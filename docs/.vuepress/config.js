@@ -16,7 +16,7 @@ module.exports = {
             (function() {
             let aHtml = document.createElement('a');
               var hm = document.createElement("script");
-              hm.src = "https://hm.baidu.com/hm.js?6e843bf2bccfd3a2bf5e09f39934028a";
+              hm.src = "//hm.baidu.com/hm.js?6e843bf2bccfd3a2bf5e09f39934028a";
               var s = document.getElementsByTagName("script")[0]; 
               s.parentNode.insertBefore(hm, s);
             })();`
@@ -45,11 +45,6 @@ module.exports = {
         subSidebar: 'auto',
         logo: '/logo/small.png',
         author: 'ZhengJie',
-        // 备案
-        record: '浙ICP备18005431号-7',
-        recordLink: 'https://beian.miit.gov.cn',
-        // 项目开始时间，只填写年份
-        startYear: '2018',
         nav: [
             { text: '开发指南', link: '/guide/'},
             { text: '常见问题', link: '/problem/'},
