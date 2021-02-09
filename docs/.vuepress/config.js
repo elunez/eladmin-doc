@@ -25,10 +25,9 @@ module.exports = {
             "script",
             {},
             `
-            (function() {
-               document.getElementsByClassName('footer').innerHTML = '© ZhengJie 2018 - 2021 | <a href=\"https://beian.miit.gov.cn\" data-v-79f3f968=\"\">浙ICP备18005431号-7</a>';
-            })();
-            `
+            window.onload = function(){
+               document.getElementsByClassName('footer')[0].innerHTML = '<span style="color: #3eaf7c;font-size: 14px;font-weight: 500">© ZhengJie 2018 - 2021</span> | <a href="https://beian.miit.gov.cn" style="color:#3eaf7c;font-size: 14px;">浙ICP备18005431号-7</a>';
+            }`
         ]
 
     ],
