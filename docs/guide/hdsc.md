@@ -110,12 +110,10 @@ public class ElPermissionConfig {
 
 在我们使用的时候，有写接口是不需要验证权限，这个时候就需要我们给接口放行，使用方式如下
 
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>
 
 **1、使用注解方式**
 
@@ -155,12 +153,10 @@ protected void configure(HttpSecurity httpSecurity) throws Exception {
 
 复杂查询：`包含（IN）查询、左连接、右连接等`
 
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>
 
 ### 参数说明
 
@@ -278,13 +274,10 @@ public Object queryAll(QueryCriteria criteria, Pageable pageable){
 
 源码位于：源码位于：``` eladmin-common ``` 模块中的 `exception` 包中
 
-
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>
 
 ### 异常封装
 
@@ -486,12 +479,10 @@ public ResponseEntity create(@Validated @RequestBody User resources){
 
 实现思路就是通过获取角色中关联的部门ID，再通过 IN 查询，达到数据权限控制，前提是被查询的表中需要有 部门ID 的字段。
 
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>
 
 ### 注解方式
 
@@ -543,12 +534,10 @@ public @interface DataPermission {
 ## 定时任务
 对于简单的定时任务用 ```Spring```的 ```@Scheduled``` 注解即可，如需要动态管理定时任务就需要使用到 ```Quartz```。本系统的动态定时任务源码位于 ``` eldamin-system -> modules -> quartz ```，使用流程如下
 
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>
 
 ### 任务处理类
 ```java
@@ -596,12 +585,10 @@ public class TestTask {
 
 本系统提供高灵活度的代码生成功能，只需要在数据库中设计好表结构，就能一键生成前后端代码，是不是很nice，使用流程如下
 
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>
 
 ###  表结构设计
 1. 配置主键（字符串或者整形皆可，整形可不设置自增）
@@ -786,13 +773,10 @@ public class AsyncTaskExecutePool implements AsyncConfigurer {
 
  通过该工具类可以快速创建一个线程池，目前在 定时任务模块中使用到 ，代码地址： 
  
- 
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>
 
 ```
 eladmin-system -> me.zhengjie.config.ThreadPoolExecutorUtil
@@ -847,9 +831,7 @@ private final static ThreadPoolExecutor executor = ThreadPoolExecutorUtil.getPol
 
 ![](https://img.el-admin.xin/images/2020/06/25/20200605160509.png)
 
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>

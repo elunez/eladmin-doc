@@ -68,12 +68,10 @@ meta: {
 ### 动态菜单
 本项目的动态菜单支持到 ```4级``` 菜单，支持 ```外链```，支持```自定义图标```，添加教程如下：
 
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>
 
 ####  (1) 添加外链
 
@@ -193,12 +191,10 @@ cruds() {
 
 首先我们需要在字典管理中创建一个字典
 
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>
 
 ### 使用全局组件
 
@@ -278,12 +274,10 @@ export default {
 
 `tools->picture->index.vue`
 
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>
 
 ### 获取Token
 
@@ -388,9 +382,7 @@ service.interceptors.response.use(
 - 富文本：[使用文档](https://www.kancloud.cn/wangfupeng/wangeditor3/332599)
 - Markdown：[使用文档](https://github.com/hinesboy/mavonEditor)
 
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>

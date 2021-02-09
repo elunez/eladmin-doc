@@ -50,12 +50,10 @@ linux：直接使用 vi ~/.npmrc
 因为本项目是前后端分离的，所以需要前后端都启动好，才能进行访问
 :::
 
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>
 
 ### 后端运行[Idea]
 
@@ -209,9 +207,7 @@ linux：直接使用 vi ~/.npmrc
 2. 直接使用：npm install --unsafe-perm
 ```
 
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>

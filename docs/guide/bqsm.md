@@ -8,9 +8,7 @@
 
 开源不易，且用且珍惜！
 
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>

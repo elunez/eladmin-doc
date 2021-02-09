@@ -10,9 +10,7 @@
 
 [手把手教你贡献代码](https://www.cnblogs.com/wenber/p/3630921.html)
 
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>

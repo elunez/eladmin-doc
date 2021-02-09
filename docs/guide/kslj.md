@@ -62,10 +62,7 @@ EL-ADMIN 基于 Spring Boot 2.1.0 、 Spring Boot Jpa、 JWT、Spring Security�
 - eladmin-generator 系统代码生成模块
 ```
 
-<div>
 <InArticleAdsense
     data-ad-client="ca-pub-3964897280370772"
     data-ad-slot="8192154900">
 </InArticleAdsense>
-</div>
-
