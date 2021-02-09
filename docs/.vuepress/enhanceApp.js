@@ -19,6 +19,7 @@ export default ({router}) => {
     if (typeof _hmt != "undefined") {
       if (to.path) {
         _hmt.push(["_trackPageview", to.fullPath]);
+
       }
     }
     // let paras = document.getElementsByClassName('adswrapper');
