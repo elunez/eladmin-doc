@@ -20,6 +20,7 @@ module.exports = {
               s.parentNode.insertBefore(hm, s);
             })();`
         ],
+
         // 加入备案信息
         [
             "script",
@@ -31,7 +32,23 @@ module.exports = {
                   doc[0].innerHTML = '<span style="color: #3eaf7c;font-size: 14px;font-weight: 500">© ZhengJie 2018 - 2021</span> | <a href="https://beian.miit.gov.cn" style="color:#3eaf7c;font-size: 14px;">浙ICP备18005431号-7</a>';
                }
             }`
-        ]
+        ],
+
+        // 谷歌广告
+        [   "script",
+            {},
+            `
+            window.onload = function() {
+                setTimeout(function() {
+                    let s = document.createElement("script");
+                    s.setAttribute("async", "");
+                    s.setAttribute("data-ad-client", "ca-pub-3964897280370772");
+                    s.src = "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+                    document.body.appendChild(script);
+                }, 2000);
+            }
+            `
+        ],
 
     ],
     // 网站标题及描述
