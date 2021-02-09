@@ -330,8 +330,3 @@ server
 3、打包项目并且上传到 `/home/nginx/html/eladmin` 目录下
 
 4、重启 Nginx 容器 `docker restart nginx` 
-
-<InArticleAdsense
-    data-ad-client="ca-pub-3964897280370772"
-    data-ad-slot="8192154900">
-</InArticleAdsense>

@@ -65,8 +65,3 @@ Consider defining a bean of type 'me.zhengjie.modules.system.service.mapper.User
 ## 如何反馈项目 Bug
 可在 [Issues](https://github.com/elunez/eladmin-docs/issues) 中留言，或者加群```891137268、947578238```进行反馈
 
-<InArticleAdsense
-    data-ad-client="ca-pub-3964897280370772"
-    data-ad-slot="8192154900">
-</InArticleAdsense>
-

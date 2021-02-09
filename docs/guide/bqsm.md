@@ -7,8 +7,3 @@
 5. 你可以修改包名或类名，但还请保留文件中的版权和作者信息。
 
 开源不易，且用且珍惜！
-
-<InArticleAdsense
-    data-ad-client="ca-pub-3964897280370772"
-    data-ad-slot="8192154900">
-</InArticleAdsense>
