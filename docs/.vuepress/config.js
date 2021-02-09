@@ -1,7 +1,9 @@
 module.exports = {
     // 插件
     plugins: {
-        '@vuepress/back-to-top': {}
+        '@vuepress/back-to-top': {},
+        '@vuepress/google-analytics': { 'ga': 'G-QTTKDL6ST0'},
+        '@vuepress/active-header-links': {}
     },
     // 头部
     head: [
@@ -12,16 +14,25 @@ module.exports = {
             {}, `
             var _hmt = _hmt || [];
             (function() {
+            let aHtml = document.createElement('a');
               var hm = document.createElement("script");
               hm.src = "https://hm.baidu.com/hm.js?6e843bf2bccfd3a2bf5e09f39934028a";
               var s = document.getElementsByTagName("script")[0]; 
               s.parentNode.insertBefore(hm, s);
             })();`
+        ],
+        [
+            "script",
+            {},
+            `
+            window.οnlοad=function(){
+               document.getElementsByClassName('footer').innerHTML = '© ZhengJie 2018 - 2021 | <a href="https://beian.miit.gov.cn" data-v-79f3f968="">浙ICP备18005431号-7</a>';
+            }
+            `
         ]
 
     ],
     // 网站标题及描述
-    theme: 'reco',
     title: '个人学习文档',
     description: '一个简单且易上手的 Spring boot 后台管理框架',
     // 主题配置
@@ -40,15 +51,15 @@ module.exports = {
         // 项目开始时间，只填写年份
         startYear: '2018',
         nav: [
-            { text: '指南', link: '/guide/', icon: 'reco-document'},
-            { text: '问题', link: '/problem/', icon: 'reco-faq'},
-            { text: '日志', link: '/version/V2.6/', icon: 'reco-date'},
-            { text: '捐赠', link: '/donation/', icon: 'reco-account'},
-            { text: '体验', link: 'https://el-admin.xin', icon: 'reco-other'},
-            { text: '博客', link: 'https://www.ydyno.com', icon: 'reco-bokeyuan'},
+            { text: '开发指南', link: '/guide/'},
+            { text: '常见问题', link: '/problem/'},
+            { text: '更新日志', link: '/version/V2.6/'},
+            { text: '捐赠支持', link: '/donation/'},
+            { text: '体验地址', link: 'https://el-admin.xin'},
+            { text: '作者博客', link: 'https://www.ydyno.com'},
             // 下拉列表
             {
-                text: '源码',
+                text: '源码下载',
                 items: [
                     {
                         text: 'Github',
@@ -58,8 +69,7 @@ module.exports = {
                         text: 'Gitee',
                         link: 'https://gitee.com/elunez/eladmin'
                     }
-                ],
-                icon: 'reco-github'
+                ]
             }
         ],
         sidebar: {
