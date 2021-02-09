@@ -21,6 +21,7 @@ module.exports = {
               s.parentNode.insertBefore(hm, s);
             })();`
         ],
+        // 加入备案信息
         [
             "script",
             {},
