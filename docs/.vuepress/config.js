@@ -19,17 +19,7 @@ module.exports = {
               var s = document.getElementsByTagName("script")[0]; 
               s.parentNode.insertBefore(hm, s);
             })();`
-        ],
-        [
-            "script",
-            {},
-            `
-            (function() {
-               document.getElementsByClassName('footer').innerHTML = '© ZhengJie 2018 - 2021 | <a href=\"https://beian.miit.gov.cn\" data-v-79f3f968=\"\">浙ICP备18005431号-7</a>';
-            })();
-            `
         ]
-
     ],
     // 网站标题及描述
     title: '个人学习文档',
