@@ -1,7 +1,7 @@
 <template>
   <ParentLayout>
-    <AdSense slot="sidebar-bottom"/>
-    <AdSense slot="page-bottom"/>
+<!--    <AdSense slot="sidebar-bottom"/>-->
+    <InArticleAdsense style="max-width: 740px;margin: 0 auto;" data-ad-client="ca-pub-3964897280370772" data-ad-slot="8192154900" slot="page-bottom" />
   </ParentLayout>
 </template>
 
