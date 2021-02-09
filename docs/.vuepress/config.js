@@ -26,7 +26,10 @@ module.exports = {
             {},
             `
             window.onload = function(){
-               document.getElementsByClassName('footer')[0].innerHTML = '<span style="color: #3eaf7c;font-size: 14px;font-weight: 500">© ZhengJie 2018 - 2021</span> | <a href="https://beian.miit.gov.cn" style="color:#3eaf7c;font-size: 14px;">浙ICP备18005431号-7</a>';
+               var doc = document.getElementsByClassName('footer');
+               if(doc.length > 0){
+                  doc[0].innerHTML = '<span style="color: #3eaf7c;font-size: 14px;font-weight: 500">© ZhengJie 2018 - 2021</span> | <a href="https://beian.miit.gov.cn" style="color:#3eaf7c;font-size: 14px;">浙ICP备18005431号-7</a>';
+               }
             }`
         ]
 
