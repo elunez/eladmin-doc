@@ -186,11 +186,6 @@ cruds() {
 
 首先我们需要在字典管理中创建一个字典
 
-<InArticleAdsense
-    data-ad-client="ca-pub-3964897280370772"
-    data-ad-slot="8192154900">
-</InArticleAdsense>
-
 ### 使用全局组件
 
 ::: tip

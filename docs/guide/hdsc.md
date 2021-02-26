@@ -464,11 +464,6 @@ public ResponseEntity create(@Validated @RequestBody User resources){
 
 实现思路就是通过获取角色中关联的部门ID，再通过 IN 查询，达到数据权限控制，前提是被查询的表中需要有 部门ID 的字段。
 
-<InArticleAdsense
-    data-ad-client="ca-pub-3964897280370772"
-    data-ad-slot="8192154900">
-</InArticleAdsense>
-
 ### 注解方式
 
 现可通过注解 `@DataPermission` 进行权限控制
