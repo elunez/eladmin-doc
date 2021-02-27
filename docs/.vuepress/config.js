@@ -36,7 +36,7 @@ module.exports = {
 
     ],
     // 网站标题及描述
-    title: '个人学习文档',
+    title: 'EL-ADMIN',
     description: '一个简单且易上手的 Spring boot 后台管理框架',
     // 主题配置
     themeConfig: {
@@ -51,7 +51,7 @@ module.exports = {
         nav: [
             { text: '开发指南', link: '/guide/'},
             { text: '常见问题', link: '/problem/'},
-            { text: '更新日志', link: '/version/V2.6/'},
+            { text: '更新日志', link: '/version/'},
             { text: '捐赠支持', link: '/donation/'},
             { text: '体验地址', link: 'https://el-admin.xin'},
             { text: '作者博客', link: 'https://www.ydyno.com'},
@@ -111,8 +111,8 @@ module.exports = {
                     title: '更新日志',
                     collapsable: false,
                     children: [
-                        'V2.6',
-                        'V2.5'
+                        '/version/',
+                        '/version/V2.5'
                     ]
                 }
             ]
