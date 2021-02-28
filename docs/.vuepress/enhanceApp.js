@@ -28,6 +28,9 @@ export default ({router}) => {
           (window.adsbygoogle || []).push({});
         }
       }
+      if(from.name === null){
+        (window.adsbygoogle || []).push({});
+      }
     }
     next();
   });

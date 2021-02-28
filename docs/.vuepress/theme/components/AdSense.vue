@@ -5,9 +5,6 @@
          style="display:inline-block;width:266px;height:96px;"
          data-ad-client="ca-pub-3964897280370772"
          data-ad-slot="6487877338" />
-    <script>
-      (window.adsbygoogle || []).push({});
-    </script>
   </div>
 </template>
 
