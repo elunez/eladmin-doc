@@ -1,11 +1,10 @@
 <template>
-  <div class="adsense-content">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <div id="el-adsense-content">
     <!-- 原生 -->
     <ins class="adsbygoogle"
-         style="display:inline-block;width:256px;height:126px"
+         style="display:inline-block;width:256px;height:100px"
          data-ad-client="ca-pub-3964897280370772"
-         data-ad-slot="6487877338"></ins>
+         data-ad-slot="6487877338" />
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
@@ -13,12 +12,12 @@
 </template>
 
 <style scoped>
-.adsense-content {
+#el-adsense-content {
   display: block;
-  padding: 1.5rem 1.5rem 0;
+  padding: 1.0rem 1.0rem 0;
   font-size: .75rem;
   max-width:256px;
-  max-height:126px;
+  max-height:100px;
   margin: 0 auto !important;
 }
 </style>

@@ -17,6 +17,17 @@ export default ({router}) => {
       if (to.path) {
         _hmt.push(["_trackPageview", to.fullPath]);
       }
+      if (to.path !== from.path) {
+        let paras = document.getElementById('el-adsense-content');
+        if (paras){
+          paras.innerHTML = '';
+          paras.innerHTML = '<ins class="adsbygoogle"\n' +
+              '         style="display:inline-block;width:256px;height:100px"\n' +
+              '         data-ad-client="ca-pub-3964897280370772"\n' +
+              '         data-ad-slot="6487877338" />';
+          (window.adsbygoogle || []).push({});
+        }
+      }
     }
     next();
   });
