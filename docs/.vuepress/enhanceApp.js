@@ -25,8 +25,8 @@ export default ({router}) => {
               '         style="display:inline-block;width:256px;height:100px"\n' +
               '         data-ad-client="ca-pub-3964897280370772"\n' +
               '         data-ad-slot="6487877338" />';
-          (window.adsbygoogle || []).push({});
         }
+        (window.adsbygoogle || []).push({});
       }
     }
     next();
