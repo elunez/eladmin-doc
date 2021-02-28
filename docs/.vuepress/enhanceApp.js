@@ -19,13 +19,11 @@ export default ({router}) => {
       }
       if ((to.path !== from.path || from.name === null) && to.path !== '/') {
         let paras = document.getElementById('el-adsense-content');
-        if (paras){
-          paras.innerHTML = '';
-          paras.innerHTML = '<ins class="adsbygoogle"\n' +
-              '         style="display:inline-block;width:256px;height:100px"\n' +
-              '         data-ad-client="ca-pub-3964897280370772"\n' +
-              '         data-ad-slot="6487877338" />';
-        }
+        paras.innerHTML = '';
+        paras.innerHTML = '<ins class="adsbygoogle"\n' +
+            '         style="display:inline-block;width:256px;height:100px"\n' +
+            '         data-ad-client="ca-pub-3964897280370772"\n' +
+            '         data-ad-slot="6487877338" />';
         (window.adsbygoogle || []).push({});
       }
     }
