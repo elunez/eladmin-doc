@@ -17,7 +17,7 @@ export default ({router}) => {
       if (to.path) {
         _hmt.push(["_trackPageview", to.fullPath]);
       }
-      if (to.path !== from.path) {
+      if (to.path !== from.path && to.path !== '/') {
         let paras = document.getElementById('el-adsense-content');
         if (paras){
           paras.innerHTML = '';
@@ -28,7 +28,7 @@ export default ({router}) => {
           (window.adsbygoogle || []).push({});
         }
       }
-      if(from.name === null){
+      if(from.name === null && to.path !== '/'){
         (window.adsbygoogle || []).push({});
       }
     }
