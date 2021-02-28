@@ -17,14 +17,16 @@ export default ({router}) => {
       if (to.path) {
         _hmt.push(["_trackPageview", to.fullPath]);
       }
-      if ((to.path !== from.path || from.name === null) && to.path !== '/') {
+      if (to.path !== from.path && to.path !== '/' && from.name !== null) {
         let paras = document.getElementById('el-adsense-content');
-        paras.innerHTML = '';
-        paras.innerHTML = '<ins class="adsbygoogle"\n' +
-            '         style="display:inline-block;width:256px;height:100px"\n' +
-            '         data-ad-client="ca-pub-3964897280370772"\n' +
-            '         data-ad-slot="6487877338" />';
-        (window.adsbygoogle || []).push({});
+        if (paras){
+          paras.innerHTML = '';
+          paras.innerHTML = '<ins class="adsbygoogle"\n' +
+              '         style="display:inline-block;width:256px;height:100px"\n' +
+              '         data-ad-client="ca-pub-3964897280370772"\n' +
+              '         data-ad-slot="6487877338" />';
+          (window.adsbygoogle || []).push({});
+        }
       }
     }
     next();
