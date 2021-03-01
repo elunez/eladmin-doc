@@ -18,6 +18,5 @@
   max-height:55px;
   max-width:740px;
   margin: 0 auto !important;
-  background-color: #3eaf7c;
 }
 </style>
