@@ -6,8 +6,6 @@
 
 ## 常规部署方式
 
-<PostAdSense />
-
 ### 后端部署
 
 #### 修改配置
@@ -166,8 +164,6 @@ systemctl restart nginx
 对于熟悉 Docker 的开发者来说，使用 Docker 部署管理更加的简单高效
 
 我一般习惯将 home 目录作为工作目录，因此 Docker 挂载的文件也都会存放在 home 目录中
-
-<PostAdSense />
 
 ### 安装Docker
 ```
