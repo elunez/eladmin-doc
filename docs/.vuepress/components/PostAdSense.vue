@@ -1,5 +1,5 @@
 <template>
-  <div id="el-adsense-content-post" v-if="show">
+  <div id="el-adsense-content-post">
     <!-- 原生文章 -->
     <ins class="adsbygoogle"
          style="display:inline-block;width:740px;height:55px"
@@ -10,23 +10,6 @@
     </script>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'PostAdSense',
-  data() {
-    return {
-      show: false
-    }
-  },
-  mounted() {
-    let paras = document.getElementsByClassName('google-auto-placed')
-    if(paras.length === 0){
-      this.show = true
-    }
-  }
-}
-</script>
 
 <style scoped>
 #el-adsense-content-post {
