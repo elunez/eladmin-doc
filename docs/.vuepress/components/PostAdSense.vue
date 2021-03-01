@@ -19,7 +19,7 @@ export default {
       show: false
     }
   },
-  created() {
+  mounted() {
     let paras = document.getElementsByClassName('adswrapper')
     if(paras.length === 0){
       this.show = true
