@@ -20,7 +20,7 @@ export default {
     }
   },
   mounted() {
-    let paras = document.getElementsByClassName('adswrapper')
+    let paras = document.getElementsByClassName('google-auto-placed')
     if(paras.length === 0){
       this.show = true
     }
