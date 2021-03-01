@@ -23,6 +23,15 @@ export default ({router}) => {
               '         data-ad-slot="6487877338" />';
           (window.adsbygoogle || []).push({});
         }
+        let post = document.getElementById('el-adsense-content-post');
+        if (post){
+          post.innerHTML = '';
+          post.innerHTML = '<ins class="adsbygoogle"\n' +
+              '         style="display:inline-block;width:740px;height:55px"\n' +
+              '         data-ad-client="ca-pub-3964897280370772"\n' +
+              '         data-ad-slot="2070120178" />';
+          (window.adsbygoogle || []).push({});
+        }
       }
     }
     next();
