@@ -60,6 +60,10 @@ Consider defining a bean of type 'me.zhengjie.modules.system.service.mapper.User
 ## 关于新增部门后数据不显示的问题
 2.6 版本中的超级管理员角色的数据权限设置的是自定义，修改为全部即可
 
+## 优化部署到线上后，首次打开页面缓慢的问题
+首先是服务器的带宽太低，因此打开缓慢，优化方案可以使用 Nginx 的 Gzip 压缩 js
+教程地址：[https://www.ydyno.com/archives/1260.html](https://www.ydyno.com/archives/1260.html)
+
 ## 关于如何使用```https```部署
 群文件有 ```https```的```ngnix```配置文件，可供参考，[百度](https://www.baidu.com/s?tn=02003390_43_hao_pg&isource=infinity&iname=baidu&itype=web&ie=utf-8&wd=ngnix%20https) 上也有很多教程的
 
