@@ -1,7 +1,7 @@
 <template>
   <ParentLayout>
     <AdSense slot="sidebar-top"/>
-    <PostAdSense slot="page-bottom"/>
+    <PostAdSense slot="page-top"/>
   </ParentLayout>
 </template>
 

@@ -17,6 +17,9 @@
   font-size: .75rem;
   max-height:55px;
   max-width:740px;
-  margin: 0 auto !important;
+  margin-top: 70px;
+  margin-bottom: -70px;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 </style>
