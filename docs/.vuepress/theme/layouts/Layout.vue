@@ -10,8 +10,7 @@ import AdSense from '../components/AdSense.vue'
 export default {
   components: {
     ParentLayout,
-    AdSense,
-    PostAdSense
+    AdSense
   }
 }
 </script>
