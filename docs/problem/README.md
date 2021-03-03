@@ -65,6 +65,16 @@ Consider defining a bean of type 'me.zhengjie.modules.system.service.mapper.User
 
 教程地址：[https://www.ydyno.com/archives/1260.html](https://www.ydyno.com/archives/1260.html)
 
+## 第三方系统（微信小程序）获取 Token 的方式
+使用如下代码即可, Issues地址：[https://github.com/elunez/eladmin/issues/585](https://github.com/elunez/eladmin/issues/585)
+
+```java
+UserDetails userDetails = userDetailsService.loadUserByUsername(userInfo.getUsername());
+Authentication authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+SecurityContextHolder.getContext().setAuthentication(authentication);
+String token = tokenProvider.createToken(authentication);
+```
+
 ## 关于如何使用```https```部署
 群文件有 ```https```的```ngnix```配置文件，可供参考，[百度](https://www.baidu.com/s?tn=02003390_43_hao_pg&isource=infinity&iname=baidu&itype=web&ie=utf-8&wd=ngnix%20https) 上也有很多教程的
 
