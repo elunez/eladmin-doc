@@ -1,6 +1,6 @@
 <template>
   <ParentLayout>
-    <AdSense slot="sidebar-top"/>
+<!--    <AdSense slot="sidebar-top"/>-->
   </ParentLayout>
 </template>
 
