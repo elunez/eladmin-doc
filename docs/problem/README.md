@@ -45,7 +45,9 @@ Consider defining a bean of type 'me.zhengjie.modules.system.service.mapper.User
 
 ```java
 // com.demo.* 改为你自己定义的包名
-@componentscan({"me.zhengjie.*","com.demo.*"})
+@ComponentScan(basePackages ={"me.zhengjie","com.xxxxxxx"})
+@EnableJpaRepositories({"com.xxxxxxx.**.repository","me.zhengjie.**.repository"})
+@EntityScan({"com.xxxxxxx.*","me.zhengjie.*"})
 ```
 
 如果仅仅只写 @ComponentScan({"com.demo.*"}) 
