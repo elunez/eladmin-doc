@@ -11,7 +11,7 @@
 安装教程：https://www.runoob.com/maven/maven-setup.html
 4、MYSQL 5.5.0+
 安装教程：https://www.runoob.com/mysql/mysql-install.html
-5、Node v10+
+5、Node v10+ (最好使用 12，高版本可能会有问题)
 安装教程：https://www.runoob.com/nodejs/nodejs-install-setup.html
 ```
 
