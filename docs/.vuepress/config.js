@@ -44,6 +44,8 @@ module.exports = {
         [
             "script",
             {
+                async: true,
+                id: "ethicalads-eladmin",
                 src: "https://el-admin.vip/ad.js"
             }
         ]

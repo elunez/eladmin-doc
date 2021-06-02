@@ -9,7 +9,7 @@
   display: block;
   padding: 0.7rem 0.7rem 0;
   font-size: .75rem;
-  min-width:240px;
+  min-width:260px;
   min-height:105px;
   margin: 0 auto !important;
 }
