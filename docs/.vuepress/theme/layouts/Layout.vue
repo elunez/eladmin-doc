@@ -1,16 +1,16 @@
 <template>
   <ParentLayout>
-<!--    <AdSense slot="sidebar-top"/>-->
+    <Ad slot="sidebar-top"/>
   </ParentLayout>
 </template>
 
 <script>
 import ParentLayout from '@parent-theme/layouts/Layout.vue'
-import AdSense from '../components/AdSense.vue'
+import Ad from '../components/Ad.vue'
 export default {
   components: {
     ParentLayout,
-    AdSense
+    Ad
   }
 }
 </script>

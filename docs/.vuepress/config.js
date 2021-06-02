@@ -40,6 +40,13 @@ module.exports = {
             }
             `
         ],
+        // 其他广告
+        [
+            "script",
+            {
+                src: "https://media.ethicalads.io/media/client/ethicalads.min.js"
+            }
+        ]
 
     ],
     // 网站标题及描述
