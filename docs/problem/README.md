@@ -51,14 +51,6 @@ Consider defining a bean of type 'me.zhengjie.modules.system.service.mapper.User
 @EntityScan({"com.xxxxxxx.*","me.zhengjie.*"})
 ```
 
-如果仅仅只写 @ComponentScan({"com.demo.*"}) 
-
-将导致 me.zhengjie 包下的类无法被扫描到（框架原始的默认扫描效果无效了）
-
-因为 `springboot` 默认扫描规则是扫描启动器类的同包或者其子包的下的注解
-
-而你新加的模块的包名与 `me.zhengjie` 不一致，没有被扫描到肯定是 404
-
 ## 关于新增部门后数据不显示的问题
 2.6 版本中的超级管理员角色的数据权限设置的是自定义，修改为全部即可
 
