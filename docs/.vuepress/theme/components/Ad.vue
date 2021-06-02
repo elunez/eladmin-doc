@@ -9,8 +9,8 @@
   display: block;
   padding: 1.0rem 1.0rem 0;
   font-size: .75rem;
-  max-width:266px;
-  max-height:120px;
+  width:242px;
+  height:105px;
   margin: 0 auto !important;
 }
 </style>
