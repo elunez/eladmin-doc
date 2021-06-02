@@ -1,6 +1,5 @@
 <template>
   <div id="el-adsense-content">
-    <!-- Show an image ad -->
     <div data-ea-publisher="el-admin" data-ea-type="text"/>
   </div>
 </template>
