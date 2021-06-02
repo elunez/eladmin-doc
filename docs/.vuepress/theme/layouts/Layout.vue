@@ -1,6 +1,6 @@
 <template>
   <ParentLayout>
-    <Ad slot="sidebar-top"/>
+<!--    <Ad slot="sidebar-top"/>-->
   </ParentLayout>
 </template>
 
