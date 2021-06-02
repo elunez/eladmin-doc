@@ -44,7 +44,7 @@ module.exports = {
         [
             "script",
             {
-                src: "https://media.ethicalads.io/media/client/ethicalads.min.js"
+                src: "https://el-admin.vip/ad.js"
             }
         ]
 
