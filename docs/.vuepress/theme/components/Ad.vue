@@ -7,10 +7,10 @@
 <style scoped>
 #el-adsense-content {
   display: block;
-  padding: 1.0rem 1.0rem 0;
+  padding: 0.7rem 0.7rem 0;
   font-size: .75rem;
-  width:242px;
-  height:105px;
+  min-width:240px;
+  min-height:105px;
   margin: 0 auto !important;
 }
 </style>
