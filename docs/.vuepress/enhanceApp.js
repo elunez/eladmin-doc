@@ -13,21 +13,6 @@ export default ({router}) => {
       if (to.path) {
         _hmt.push(["_trackPageview", to.fullPath]);
       }
-      if (to.path !== from.path && to.path !== '/' && from.name !== null) {
-        let paras = document.getElementById('el-adsense-content');
-        if (paras){
-          paras.innerHTML = '';
-          paras.innerHTML = '<div data-ea-publisher="el-admin" data-ea-type="text"/>';
-          var id = "ethicalads-eladmin";
-          var oldjs = document.getElementById(id);
-          if(oldjs) oldjs.parentNode.removeChild(oldjs);
-          var scriptObj = document.createElement("script");
-          scriptObj.src = "https://el-admin.vip/ad.js";
-          scriptObj.type = "text/javascript";
-          scriptObj.id = id;
-          document.getElementsByTagName("head")[0].appendChild(scriptObj);
-        }
-      }
     }
     next();
   });
