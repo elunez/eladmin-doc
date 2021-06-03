@@ -21,7 +21,7 @@ export default ({router}) => {
               '         style="display:inline-block;width:266px;height:140px"\n' +
               '         data-ad-client="ca-pub-3964897280370772"\n' +
               '         data-ad-slot="5748135954"/>';
-          (window.adsbygoogle || []).push({});
+          (adsbygoogle = window.adsbygoogle || []).push({});
         }
       }
     }
