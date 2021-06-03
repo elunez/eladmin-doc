@@ -40,13 +40,12 @@ module.exports = {
             }
             `
         ],
-        // 其他广告
+        // 谷歌广告
         [
             "script",
             {
                 async: true,
-                id: "ethicalads-eladmin",
-                src: "https://el-admin.vip/ad.js"
+                src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
             }
         ]
 

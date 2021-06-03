@@ -1,6 +1,10 @@
 <template>
   <div id="el-adsense-content">
-    <div data-ea-publisher="el-admin" data-ea-type="text"/>
+    <!-- 侧栏 -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:266px;height:140px"
+         data-ad-client="ca-pub-3964897280370772"
+         data-ad-slot="5748135954"/>
   </div>
 </template>
 
@@ -9,8 +13,8 @@
   display: block;
   padding: 0.7rem 0.7rem 0;
   font-size: .75rem;
-  min-width:240px;
-  min-height:105px;
+  max-width:266px;
+  max-height:140px;
   margin: 0 auto !important;
 }
 </style>
