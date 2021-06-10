@@ -178,7 +178,7 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun && systemctl 
 这里使用的是 mariadb 镜像，并且将 mariadb 数据库文件挂载到宿主机的 `/home/mysql/` 目录下
 ```
 docker run -v /home/mysql/:/var/lib/mysql \
--p 3306:3306 -e MYSQL_ROOT_PASSWORD=dqjdda1996 \
+-p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 \
 --privileged=true --restart=always --name mariadb -d mariadb
 ```
 安装Redis
