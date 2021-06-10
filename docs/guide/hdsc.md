@@ -19,7 +19,7 @@
 ![](https://img.el-admin.xin/images/2020/06/25/20200606134124.png)
 
 ::: tip
-如果包名和 System 模块 me.zhengjie 不一样，那么需要在 AppRun.class 中配置扫描路径
+如果包名和 System 模块 me.zhengjie 不一样，那么需要在 AppRun.class 中配置扫描路径，两个地方都需增加@ComponentScan及@EnableJpaRepositories。
 :::
 
 详见：[新建模块后访问接口 404](https://el-admin.vip/problem/#%E6%96%B0%E5%BB%BA%E6%A8%A1%E5%9D%97%E5%90%8E%E8%AE%BF%E9%97%AE%E6%8E%A5%E5%8F%A3-404)
