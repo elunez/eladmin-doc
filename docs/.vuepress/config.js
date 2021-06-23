@@ -42,18 +42,17 @@ module.exports = {
         ],
         // 谷歌广告
         ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", async: true}],
-        ['script', {}, '(adsbygoogle = window.adsbygoogle || []).push({});']
+        ['script', {}, '(adsbygoogle = window.adsbygoogle || []).push({});'],
         // 谷歌分析
         ['script', { src: "https://www.googletagmanager.com/gtag/js?id=G-QTTKDL6ST0", async: true}],
         [
-            "script",
-            {}, `
+            "script", {}, `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-QTTKDL6ST0');
             `
-        ],
+        ]
     ],
     // 网站标题及描述
     // title: '个人学习文档',
