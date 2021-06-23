@@ -36,7 +36,7 @@ module.exports = {
                     s.setAttribute("data-ad-client", "ca-pub-3964897280370772");
                     s.src = "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
                     document.body.appendChild(s);
-                }, 1000);
+                }, 200);
             }
             `
         ],
