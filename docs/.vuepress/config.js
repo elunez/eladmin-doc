@@ -72,7 +72,6 @@ module.exports = {
             { text: '项目指南', link: '/guide/', icon: 'reco-document'},
             { text: '常见问题', link: '/problem/', icon: 'reco-faq'},
             { text: '更新日志', link: '/version/', icon: 'reco-date'},
-            { text: '捐赠支持', link: '/donation/', icon: 'reco-account'},
             { text: '作者博客', link: 'https://www.ydyno.com', icon: 'reco-blog'},
             // 下拉列表
             {
@@ -118,10 +117,14 @@ module.exports = {
                     children: [
                         '/guide/mx'
                     ]
+                },
+                {
+                    title: '捐赠',
+                    collapsable: false,
+                    children: [
+                        '/guide/donation'
+                    ]
                 }
-            ],
-            '/donation/': [
-                '/donation/',
             ],
             '/problem/': [
                 '/problem/',
