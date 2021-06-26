@@ -1,8 +1,7 @@
 module.exports = {
     // 插件
     plugins: {
-        '@vuepress/back-to-top': {},
-        '@vuepress/active-header-links': {}
+        '@vuepress/back-to-top': {}
     },
     // 头部
     head: [
@@ -19,7 +18,6 @@ module.exports = {
               s.parentNode.insertBefore(hm, s);
             })();`
         ],
-
         // 加入备案信息
         // 谷歌广告
         [   "script",
@@ -32,7 +30,7 @@ module.exports = {
                     s.setAttribute("data-ad-client", "ca-pub-3964897280370772");
                     s.src = "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
                     document.body.appendChild(s);
-                }, 200);
+                }, 300);
             }
             `
         ],
@@ -52,6 +50,7 @@ module.exports = {
     ],
     // 网站标题及描述
     // title: '个人学习文档',
+    theme: 'reco',
     title: 'EL-ADMIN',
     description: '一个简单且易上手的 Spring boot 后台管理框架',
     // 主题配置
@@ -64,13 +63,17 @@ module.exports = {
         subSidebar: 'auto',
         logo: '/logo/small.png',
         author: 'ZhengJie',
+        // 备案
+        record: '浙ICP备18005431号-7',
+        recordLink: 'https://beian.miit.gov.cn',
+        // 项目开始时间，只填写年份
+        startYear: '2018',
         nav: [
-            { text: '开发指南', link: '/guide/'},
-            { text: '常见问题', link: '/problem/'},
-            { text: '更新日志', link: '/version/'},
-            { text: '捐赠支持', link: '/donation/'},
-            { text: '体验地址', link: 'https://el-admin.xin'},
-            { text: '作者博客', link: 'https://www.ydyno.com'},
+            { text: '项目指南', link: '/guide/', icon: 'reco-document'},
+            { text: '常见问题', link: '/problem/', icon: 'reco-faq'},
+            { text: '更新日志', link: '/version/', icon: 'reco-date'},
+            { text: '捐赠支持', link: '/donation/', icon: 'reco-account'},
+            { text: '作者博客', link: 'https://www.ydyno.com', icon: 'reco-blog'},
             // 下拉列表
             {
                 text: '源码下载',
@@ -83,7 +86,8 @@ module.exports = {
                         text: 'Gitee',
                         link: 'https://gitee.com/elunez/eladmin'
                     }
-                ]
+                ],
+                icon: 'reco-github'
             }
         ],
         sidebar: {
