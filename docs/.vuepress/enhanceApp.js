@@ -13,17 +13,6 @@ export default ({router}) => {
       if (to.path) {
         _hmt.push(["_trackPageview", to.fullPath]);
       }
-      // if (to.path !== from.path && to.path !== '/' && from.name !== null) {
-      //   let paras = document.getElementById('el-adsense-content');
-      //   if (paras){
-      //     paras.innerHTML = '';
-      //     paras.innerHTML = '<ins class="adsbygoogle"\n' +
-      //         '         style="display:inline-block;width:266px;height:140px"\n' +
-      //         '         data-ad-client="ca-pub-3964897280370772"\n' +
-      //         '         data-ad-slot="5748135954"/>';
-      //     (window.adsbygoogle || []).push({});
-      //   }
-      // }
     }
     next();
   });

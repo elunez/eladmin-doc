@@ -1,11 +1,12 @@
 module.exports = {
     // 插件
     plugins: {
-        '@vuepress/back-to-top': {}
+        '@vuepress/back-to-top': {},
+        '@vuepress/active-header-links': {}
     },
     // 头部
     head: [
-        ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
+        ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
         ['link', { rel: 'icon', href: '/logo/small.png' }],
         [
             "script",
