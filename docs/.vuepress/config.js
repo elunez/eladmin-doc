@@ -5,7 +5,7 @@ module.exports = {
     },
     // 头部
     head: [
-        ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
+        ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
         ['link', { rel: 'icon', href: '/logo/small.png' }],
         [
             "script",
@@ -72,6 +72,7 @@ module.exports = {
             { text: '项目指南', link: '/guide/', icon: 'reco-document'},
             { text: '常见问题', link: '/problem/', icon: 'reco-faq'},
             { text: '更新日志', link: '/version/', icon: 'reco-date'},
+            { text: '特别鸣谢', link: '/thanks/', icon: 'reco-account'},
             { text: '作者博客', link: 'https://www.ydyno.com', icon: 'reco-blog'},
             // 下拉列表
             {
@@ -112,13 +113,6 @@ module.exports = {
                     ]
                 },
                 {
-                    title: '鸣谢',
-                    collapsable: false,
-                    children: [
-                        '/guide/mx'
-                    ]
-                },
-                {
                     title: '捐赠',
                     collapsable: false,
                     children: [
@@ -128,6 +122,9 @@ module.exports = {
             ],
             '/problem/': [
                 '/problem/',
+            ]
+            ,'/thanks/': [
+                '/thanks/',
             ],
             '/version/': [
                 {
