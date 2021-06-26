@@ -2,7 +2,6 @@ module.exports = {
     // 插件
     plugins: {
         '@vuepress/back-to-top': {},
-        '@vuepress/google-analytics': { 'ga': 'G-QTTKDL6ST0'},
         '@vuepress/active-header-links': {}
     },
     // 头部
@@ -20,20 +19,7 @@ module.exports = {
               var s = document.getElementsByTagName("script")[0]; 
               s.parentNode.insertBefore(hm, s);
             })();`
-        ],
-        // 加入备案信息
-        [
-            "script",
-            {},
-            `
-            window.onload = function(){
-               var doc = document.getElementsByClassName('footer');
-               if(doc.length > 0){
-                  doc[0].innerHTML = '<span style="color: #3eaf7c;font-size: 14px;font-weight: 500">© ZhengJie 2018 - 2021</span> | <a href="https://beian.miit.gov.cn" style="color:#3eaf7c;font-size: 14px;">浙ICP备18005431号-7</a>';
-               }
-            }`
         ]
-
     ],
     // 网站标题及描述
     title: 'EL-ADMIN',
