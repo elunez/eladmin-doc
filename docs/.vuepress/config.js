@@ -2,7 +2,6 @@ module.exports = {
     // 插件
     plugins: {
         '@vuepress/back-to-top': {},
-        '@vuepress/google-analytics': { 'ga': 'G-QTTKDL6ST0'},
         '@vuepress/active-header-links': {}
     },
     // 头部
@@ -27,9 +26,6 @@ module.exports = {
             {},
             `
             window.onload = function() {
-                if(document.getElementsByClassName('footer').length > 0){
-                   document.getElementsByClassName('footer')[0].innerHTML = '<span style="color: #3eaf7c;font-size: 14px;font-weight: 500">© ZhengJie 2018 - 2021</span> | <a href="https://beian.miit.gov.cn" style="color:#3eaf7c;font-size: 14px;">浙ICP备18005431号-7</a>';
-                }
                 setTimeout(function() {
                     let s = document.createElement("script");
                     s.setAttribute("async", "");
