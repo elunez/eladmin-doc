@@ -38,7 +38,6 @@ module.exports = {
             { text: '开发指南', link: '/guide/'},
             { text: '常见问题', link: '/problem/'},
             { text: '更新日志', link: '/version/'},
-            { text: '捐赠支持', link: '/donation/'},
             { text: '体验地址', link: 'https://el-admin.xin'},
             { text: '作者博客', link: 'https://www.ydyno.com'},
             // 下拉列表
@@ -84,10 +83,14 @@ module.exports = {
                     children: [
                         '/guide/mx'
                     ]
+                },
+                {
+                    title: '捐赠',
+                    collapsable: false,
+                    children: [
+                        '/guide/donation'
+                    ]
                 }
-            ],
-            '/donation/': [
-                '/donation/',
             ],
             '/problem/': [
                 '/problem/',
