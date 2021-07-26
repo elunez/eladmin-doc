@@ -21,20 +21,7 @@ module.exports = {
         ],
         // 加入备案信息
         // 谷歌广告
-        [   "script",
-            {},
-            `
-            window.onload = function() {
-                setTimeout(function() {
-                    let s = document.createElement("script");
-                    s.setAttribute("async", "");
-                    s.setAttribute("data-ad-client", "ca-pub-3964897280370772");
-                    s.src = "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-                    document.body.appendChild(s);
-                }, 300);
-            }
-            `
-        ],
+        ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964897280370772", async: true, crossorigin: "anonymous"}],
         // 谷歌分析
         ['script', { src: "https://www.googletagmanager.com/gtag/js?id=G-QTTKDL6ST0", async: true}],
         [
