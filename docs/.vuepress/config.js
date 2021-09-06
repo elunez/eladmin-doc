@@ -8,30 +8,7 @@ module.exports = {
     head: [
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
         ['link', { rel: 'icon', href: '/logo/small.png' }],
-        [
-            "script",
-            {}, `
-            var _hmt = _hmt || [];
-            (function() {
-              var hm = document.createElement("script");
-              hm.src = "//hm.baidu.com/hm.js?6e843bf2bccfd3a2bf5e09f39934028a";
-              var s = document.getElementsByTagName("script")[0]; 
-              s.parentNode.insertBefore(hm, s);
-            })();`
-        ],
-        // 加入备案信息
-        // 谷歌广告
-        ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964897280370772", async: true, crossorigin: "anonymous"}],
-        // 谷歌分析
-        ['script', { src: "https://www.googletagmanager.com/gtag/js?id=G-QTTKDL6ST0", async: true}],
-        [
-            "script", {}, `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-QTTKDL6ST0');
-            `
-        ]
+        // ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964897280370772", async: true, crossorigin: "anonymous"}],
     ],
     // 网站标题及描述
     // title: '个人学习文档',
