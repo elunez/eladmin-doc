@@ -2,18 +2,49 @@ module.exports = {
     // 插件
     plugins: {
         '@vuepress/back-to-top': {},
+        '@vuepress/google-analytics': { 'ga': 'G-QTTKDL6ST0'},
         '@vuepress/active-header-links': {}
     },
     // 头部
     head: [
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
         ['link', { rel: 'icon', href: '/logo/small.png' }],
-        // ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964897280370772", async: true, crossorigin: "anonymous"}],
+        [
+            "script",
+            {}, `
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "//hm.baidu.com/hm.js?6e843bf2bccfd3a2bf5e09f39934028a";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();`
+        ],
+
+        // 谷歌广告, 加入备案信息
+        [   "script",
+            {},
+            `
+            window.onload = function() {
+                if(document.getElementsByClassName('footer').length > 0){
+                   document.getElementsByClassName('footer')[0].innerHTML = '<span style="color: #3eaf7c;font-size: 14px;font-weight: 500">© ZhengJie 2018 - 2021</span> | <a href="https://beian.miit.gov.cn" style="color:#3eaf7c;font-size: 14px;">浙ICP备18005431号-7</a>';
+                }
+                setTimeout(function() {
+                    let s = document.createElement("script");
+                    s.setAttribute("async", "");
+                    s.setAttribute("crossorigin", "anonymous");
+                    s.src = "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964897280370772";
+                    document.body.appendChild(s);
+                }, 200);
+            }
+            `
+        ],
+
+        ['script', {}, '(adsbygoogle = window.adsbygoogle || []).push({});']
     ],
     // 网站标题及描述
     // title: '个人学习文档',
-    theme: 'reco',
-    title: 'EL-ADMIN',
+    title: 'EL-ADMIN 在线文档',
     description: '一个简单且易上手的 Spring boot 后台管理框架',
     // 主题配置
     themeConfig: {
@@ -25,17 +56,13 @@ module.exports = {
         subSidebar: 'auto',
         logo: '/logo/small.png',
         author: 'ZhengJie',
-        // 备案
-        record: '浙ICP备18005431号-7',
-        recordLink: 'https://beian.miit.gov.cn',
-        // 项目开始时间，只填写年份
-        startYear: '2018',
         nav: [
-            { text: '项目指南', link: '/guide/', icon: 'reco-document'},
-            { text: '常见问题', link: '/problem/', icon: 'reco-faq'},
-            { text: '更新日志', link: '/version/', icon: 'reco-date'},
-            { text: '特别鸣谢', link: '/thanks/', icon: 'reco-account'},
-            { text: '作者博客', link: 'https://www.ydyno.com', icon: 'reco-blog'},
+            { text: '开发指南', link: '/guide/'},
+            { text: '常见问题', link: '/problem/'},
+            { text: '更新日志', link: '/version/'},
+            { text: '捐赠支持', link: '/donation/'},
+            { text: '体验地址', link: 'https://el-admin.xin'},
+            { text: '作者博客', link: 'https://www.ydyno.com'},
             // 下拉列表
             {
                 text: '源码下载',
@@ -48,8 +75,7 @@ module.exports = {
                         text: 'Gitee',
                         link: 'https://gitee.com/elunez/eladmin'
                     }
-                ],
-                icon: 'reco-github'
+                ]
             }
         ],
         sidebar: {
@@ -75,18 +101,18 @@ module.exports = {
                     ]
                 },
                 {
-                    title: '捐赠',
+                    title: '鸣谢',
                     collapsable: false,
                     children: [
-                        '/guide/donation'
+                        '/guide/mx'
                     ]
                 }
             ],
+            '/donation/': [
+                '/donation/',
+            ],
             '/problem/': [
                 '/problem/',
-            ]
-            ,'/thanks/': [
-                '/thanks/',
             ],
             '/version/': [
                 {
