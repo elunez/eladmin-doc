@@ -29,18 +29,10 @@ module.exports = {
                 if(document.getElementsByClassName('footer').length > 0){
                    document.getElementsByClassName('footer')[0].innerHTML = '<span style="color: #3eaf7c;font-size: 14px;font-weight: 500">© ZhengJie 2018 - 2021</span> | <a href="https://beian.miit.gov.cn" style="color:#3eaf7c;font-size: 14px;">浙ICP备18005431号-7</a>';
                 }
-                setTimeout(function() {
-                    let s = document.createElement("script");
-                    s.setAttribute("async", "");
-                    s.setAttribute("crossorigin", "anonymous");
-                    s.src = "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964897280370772";
-                    document.body.appendChild(s);
-                }, 200);
             }
             `
         ],
-
-        ['script', {}, '(adsbygoogle = window.adsbygoogle || []).push({});']
+        ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964897280370772", async: true, crossorigin: "anonymous"}],
     ],
     // 网站标题及描述
     // title: '个人学习文档',
