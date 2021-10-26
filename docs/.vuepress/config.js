@@ -33,6 +33,7 @@ module.exports = {
             `
         ],
         ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964897280370772", async: true, crossorigin: "anonymous"}],
+        ['script', {}, `(adsbygoogle = window.adsbygoogle || []).push({})`],
     ],
     // 网站标题及描述
     // title: '个人学习文档',
