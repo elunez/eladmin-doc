@@ -34,7 +34,7 @@
 
 使用中遇到问题或者Bug可以在 Github 上提 [Issues](https://github.com/elunez/eladmin/issues)
 
-QQ交流群：一群：<strike>891137268</strike>、二群：947578238
+QQ交流群：一群：891137268、二群：947578238
 
 ### 加群问题
 iOS 和 macOS 可能会存在加不了群的情况，请更换成 Android 或者 Windows 系统加入
