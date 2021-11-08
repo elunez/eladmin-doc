@@ -2,7 +2,6 @@ module.exports = {
     // 插件
     plugins: {
         '@vuepress/back-to-top': {},
-        '@vuepress/google-analytics': { 'ga': 'G-QTTKDL6ST0'},
         '@vuepress/active-header-links': {}
     },
     // 头部
@@ -32,8 +31,8 @@ module.exports = {
             }
             `
         ],
-        ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964897280370772", async: true, crossorigin: "anonymous"}],
-        ['script', {}, `(adsbygoogle = window.adsbygoogle || []).push({})`],
+        // ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964897280370772", async: true, crossorigin: "anonymous"}],
+        // ['script', {}, `(adsbygoogle = window.adsbygoogle || []).push({})`],
     ],
     // 网站标题及描述
     // title: '个人学习文档',
