@@ -73,5 +73,5 @@ String token = tokenProvider.createToken(authentication);
 群文件有 ```https```的```ngnix```配置文件，可供参考，[百度](https://www.baidu.com/s?tn=02003390_43_hao_pg&isource=infinity&iname=baidu&itype=web&ie=utf-8&wd=nginx%20https) 上也有很多教程的
 
 ## 如何反馈项目 Bug
-可在 [Issues](https://github.com/elunez/eladmin-docs/issues) 中留言，或者加群```891137268、947578238```进行反馈
+可在 [Issues](https://github.com/elunez/eladmin-docs/issues) 中留言，或者加群```891137268、947578238、659622532```进行反馈
 
