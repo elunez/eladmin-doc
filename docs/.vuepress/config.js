@@ -32,7 +32,12 @@ module.exports = {
             `
         ],
         ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964897280370772", async: true, crossorigin: "anonymous"}],
-        // ['script', {}, `(adsbygoogle = window.adsbygoogle || []).push({})`],
+        ['script', {}, `(adsbygoogle = window.adsbygoogle || []).push({})`],
+
+        // 判断广告是否被拦截
+        ['script', { src: "https://www.ydyno.com/adview_pic_ads.js", type: "text/javascript"}],
+        ['script', {}, `if (typeof(killads)=='undefined'){ alert('检测到你屏蔽了本站广告，如果该项目帮到你了，是否可以将本站加入到广告屏蔽白名单中，感谢你理解与支持！'); }`],
+
     ],
     // 网站标题及描述
     // title: '个人学习文档',
