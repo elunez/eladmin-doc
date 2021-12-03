@@ -18,7 +18,7 @@ export default ({ router }) => {
         if (paras){
           paras.innerHTML = '';
           paras.innerHTML = '<ins class="adsbygoogle"\n' +
-              '         style="display:inline-block;width:260px;height:130px"\n' +
+              '         style="display:inline-block;width:260px;height:120px"\n' +
               '         data-ad-client="ca-pub-3964897280370772"\n' +
               '         data-ad-slot="5748135954"/>';
           (window.adsbygoogle || []).push({});
