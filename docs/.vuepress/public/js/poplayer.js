@@ -39,7 +39,7 @@ var poplayer = {
 		pop_tip_html += '*{margin:0;padding:0;}';
 		pop_tip_html += '.pop_tip{position: fixed;top: 0;width: 100%;height: 100%;z-index: 999;background: rgba(0,0,0,0.5);}';
 		pop_tip_html += '.pop_tip .pop_tip_box{position: absolute;top: 34%;width: 300px;left: 50%;margin-left:-150px;background: #fff;z-index: 1000;text-align: center;border-radius: 10px;}';
-		pop_tip_html += '.pop_tip .pop_tip_box .pop_tip_text{font-size: 16px;font-size: 16px;line-height: 25px;padding: 20px;text-align: center;}';
+		pop_tip_html += '.pop_tip .pop_tip_box .pop_tip_text{font-size: 13px;line-height: 25px;padding: 20px;text-align: center;}';
 		pop_tip_html += '.pop_tip .pop_tip_box .popbtm .left{display:inline-block;width: 50%;text-align: center;line-height: 35px;font-size: 16px;background: #ccc;color: #fff;border-radius: 0 0 0 10px;}';
 		pop_tip_html += '.pop_tip .pop_tip_box .popbtm .right{display:inline-block;width: 50%;text-align: center;line-height: 35px;font-size: 16px;background: #3dc6da;color: #fff;border-radius: 0 0 10px 0;}';
 		pop_tip_html += '.pop_tip .pop_tip_btn_box{margin:10px 0 20px 0;color:#fff;font-size:14px;}';
@@ -50,7 +50,7 @@ var poplayer = {
 		pop_tip_html += '.pop_tip .pop_tip_box .pop_tip_input_box input{width:(80% - 10px);height:30px;padding:0 10px;border:1px solid #ccc;}';
 		pop_tip_html += '</style>';
 		pop_tip_html += '<div class="pop_tip" id="pop_tip">';
-		pop_tip_html += '<div class="pop_tip_box"><div class="pop_tip_text">'+text+'</div>';
+		pop_tip_html += '<div class="pop_tip_box"><div class="pop_tip_text"><div style="font-size: 15px;font-weight: bold;margin-bottom: 6px;">广告屏蔽提示</div>'+text+'</div>';
 		if(inputflag){
 			pop_tip_html += '<div class="pop_tip_input_box" ><input type="text" id="pop_tip_input" placeholder="'+inputflag+'"/></div>';
 		}
