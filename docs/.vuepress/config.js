@@ -20,6 +20,15 @@ module.exports = {
             })();`
         ],
 
+        // 弹窗
+        [
+            'script', // js 文件
+            { src: '/js/poplayer.js' }
+        ],
+
+        // 判断广告是否被拦截
+        ['script', { src: "https://www.ydyno.com/adview_pic_ads.js", type: "text/javascript"}],
+
         // 谷歌广告, 加入备案信息
         [   "script",
             {},
@@ -28,17 +37,12 @@ module.exports = {
                 if(document.getElementsByClassName('footer').length > 0){
                    document.getElementsByClassName('footer')[0].innerHTML = '<span style="color: #3eaf7c;font-size: 14px;font-weight: 500">© ZhengJie 2018 - 2021</span> | <a href="https://beian.miit.gov.cn" style="color:#3eaf7c;font-size: 14px;">浙ICP备18005431号-7</a>';
                 }
+                if (typeof(killads)=='undefined'){ poplayer.alert('检测到你屏蔽了本站广告，如果本项目帮到你了，是否可以考虑将本站加到广告屏蔽白名单中，感谢你理解与支持！');}
             }
             `
         ],
         ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964897280370772", async: true, crossorigin: "anonymous"}],
         ['script', {}, `(adsbygoogle = window.adsbygoogle || []).push({})`],
-
-        // 判断广告是否被拦截
-        ['script', { src: "https://www.ydyno.com/adview_pic_ads.js", type: "text/javascript"}],
-        ['script', {}, `
-        if (typeof(killads)=='undefined'){ alert('检测到你屏蔽了本站广告，如果本项目帮到你了，是否可以考虑将本站加到广告屏蔽白名单中，感谢你理解与支持！'); }
-        `],
 
     ],
     // 网站标题及描述
