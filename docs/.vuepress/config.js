@@ -36,7 +36,9 @@ module.exports = {
 
         // 判断广告是否被拦截
         ['script', { src: "https://www.ydyno.com/adview_pic_ads.js", type: "text/javascript"}],
-        ['script', {}, `if (typeof(killads)=='undefined'){ alert('检测到你屏蔽了本站广告，如果该项目帮到你了，是否可以将本站加入到广告屏蔽白名单中，感谢你理解与支持！'); }`],
+        ['script', {}, `
+        if (typeof(killads)=='undefined'){ alert('检测到你屏蔽了本站广告，如果本项目帮到你了，是否可以考虑将本站加到广告屏蔽白名单中，感谢你理解与支持！'); }
+        `],
 
     ],
     // 网站标题及描述

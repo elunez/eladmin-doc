@@ -1,7 +1,5 @@
 import Vue from 'vue'
 
-Vue.use(require('vue-script2'))
-
 export default ({ router }) => {
   /**
    * 路由切换事件处理
