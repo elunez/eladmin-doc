@@ -41,7 +41,20 @@ module.exports = {
             }
             `
         ],
-        ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964897280370772", async: true, crossorigin: "anonymous"}],
+        [
+            "script",
+            {}, `
+            window.onload = function() {
+              setTimeout(function() {
+                let script = document.createElement("script");
+                script.setAttribute("crossorigin", "anonymous");
+                script.setAttribute("async", "");
+                script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964897280370772";
+                document.body.appendChild(script);
+              }, 200);
+            }
+            `
+        ],
         ['script', {}, `(adsbygoogle = window.adsbygoogle || []).push({})`],
 
     ],
