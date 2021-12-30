@@ -30,21 +30,14 @@ module.exports = {
         ['script', { src: "https://www.ydyno.com/adview_pic_ads.js", type: "text/javascript"}],
 
         // 谷歌广告, 加入备案信息
-        [   "script",
-            {},
-            `
-            window.onload = function() {
-                if(document.getElementsByClassName('footer').length > 0){
-                   document.getElementsByClassName('footer')[0].innerHTML = '<span style="color: #3eaf7c;font-size: 14px;font-weight: 500">© ZhengJie 2018 - 2021</span> | <a href="https://beian.miit.gov.cn" style="color:#3eaf7c;font-size: 14px;">浙ICP备18005431号-7</a>';
-                }
-                if (typeof(killads)=='undefined'){ poplayer.alert('系统检测到你屏蔽了本站广告，如果本项目帮到你了，是否能考虑将本站加入到【广告屏蔽白名单】中，感谢你理解与支持！');}
-            }
-            `
-        ],
         [
             "script",
             {}, `
-            window.onload = function() {
+             window.onload = function() {
+              if(document.getElementsByClassName('footer').length > 0){
+                   document.getElementsByClassName('footer')[0].innerHTML = '<span style="color: #3eaf7c;font-size: 14px;font-weight: 500">© ZhengJie 2018 - 2021</span> | <a href="https://beian.miit.gov.cn" style="color:#3eaf7c;font-size: 14px;">浙ICP备18005431号-7</a>';
+              }
+              if (typeof(killads)=='undefined'){ poplayer.alert('系统检测到你屏蔽了本站广告，如果本项目帮到你了，是否能考虑将本站加入到【广告屏蔽白名单】中，感谢你理解与支持！');}
               setTimeout(function() {
                 let script = document.createElement("script");
                 script.setAttribute("crossorigin", "anonymous");
