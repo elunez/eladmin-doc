@@ -17,7 +17,9 @@ export default ({
     }
     if(to.fullPath === '/'){
       var ad = document.getElementsByClassName("custom-html-window-rb")[0];
-      ad.style.display = "none"
+      if(ad !== undefined){
+        ad.style.display = "none"
+      }
     }
     next();
   });
