@@ -9,15 +9,10 @@ export default ({
    * 路由切换事件处理
    */
   router.beforeEach((to, from, next) => {
-    var ad = window.document.getElementsByClassName("custom-html-window-rb")[0];
-    console.log(ad)
-    if(to.fullPath === '/'){
-      if(ad !== undefined){
-        console.log(1)
-      }
-    } else {
-      if(ad !== undefined){
-        console.log(2)
+    //触发百度的pv统计
+    if (typeof _hmt != "undefined") {
+      if (to.path) {
+        _hmt.push(["_trackPageview", to.fullPath]);
       }
     }
     next();
