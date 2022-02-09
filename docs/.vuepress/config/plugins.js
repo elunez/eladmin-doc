@@ -21,13 +21,6 @@ module.exports = [
       ]
     }
   ],
-  // 百度统计
-  [
-    "vuepress-plugin-baidu-tongji",
-    {
-      hm: "6e843bf2bccfd3a2bf5e09f39934028a"
-    }
-  ],
   // 代码块复制
   [
     "one-click-copy",

@@ -44,5 +44,17 @@ module.exports = [
         }
       }, 3000);
     });
-  `]
+  `],
+  [
+    "script",
+    {}, `
+            var _hmt = _hmt || [];
+            (function() {
+            let aHtml = document.createElement('a');
+              var hm = document.createElement("script");
+              hm.src = "//hm.baidu.com/hm.js?6e843bf2bccfd3a2bf5e09f39934028a";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();`
+  ]
 ];
