@@ -1,6 +1,6 @@
 // Head Config
 module.exports = [
-  ["link", { rel: "icon", href: "/img/favicon.ico" }],
+  ["link", { rel: "icon", href: "/logo/small.png" }],
   [
     "meta",
     {
