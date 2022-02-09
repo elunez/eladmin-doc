@@ -9,7 +9,7 @@ export default ({
    * 路由切换事件处理
    */
   router.beforeEach((to, from, next) => {
-    var ad = document.getElementsByClassName("custom-html-window-rb")[0];
+    var ad = window.document.getElementsByClassName("custom-html-window-rb")[0];
     console.log(ad)
     if(to.fullPath === '/'){
       if(ad !== undefined){
