@@ -54,7 +54,6 @@ module.exports = {
   footer: {
     createYear: 2018,
     copyrightInfo: [
-      '| Sponsored by <a href="https://www.jetbrains.com" target="_blank" style="font-weight:bold">JetBrains</a>',
       ' | ',
       '<a href="http://beian.miit.gov.cn/" target=_blank>浙ICP备18005431号-7</a>'
     ].join('')
