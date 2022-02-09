@@ -9,16 +9,15 @@ export default ({
    * 路由切换事件处理
    */
   router.beforeEach((to, from, next) => {
-    //触发百度的pv统计
-    if (typeof _hmt != "undefined") {
-      if (to.path) {
-        _hmt.push(["_trackPageview", to.fullPath]);
-      }
-    }
+    var ad = document.getElementsByClassName("custom-html-window-rb")[0];
+    console.log(ad)
     if(to.fullPath === '/'){
-      var ad = document.getElementsByClassName("custom-html-window-rb")[0];
       if(ad !== undefined){
-        ad.style.display = "none"
+        console.log(1)
+      }
+    } else {
+      if(ad !== undefined){
+        console.log(2)
       }
     }
     next();
