@@ -26,7 +26,6 @@ module.exports = {
   windowRB: `
     <div class="wwads-cn wwads-vertical" data-id="148" style="max-width:200px;"></div>
     <script>
-        console.log(1)
         var ele = document.querySelector('.wwads-vertical').parentElement.parentElement;
         ele.style.maxHeight = 'unset';
         ele.firstChild.hidden = true;
