@@ -15,6 +15,10 @@ export default ({
         _hmt.push(["_trackPageview", to.fullPath]);
       }
     }
+    if(to.fullPath === '/'){
+      var ad = document.getElementsByClassName("custom-html-window-rb")[0];
+      ad.style.display = "none"
+    }
     next();
   });
 }
