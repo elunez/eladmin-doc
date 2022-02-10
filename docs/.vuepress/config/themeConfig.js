@@ -6,7 +6,6 @@ module.exports = {
   nav,
   sidebarDepth: 2,
   logo: "/logo/small.png",
-  repo: "elunez/eladmin",
   searchMaxSuggestions: 10,
   lastUpdated: "上次更新",
 

@@ -1,8 +1,7 @@
 module.exports = [
-  { text: "首页", link: "/" },
   {
     text: "开发指南",
-    link: "/pages/synopsis/",
+    link: "/pages/010101/",
     items: [
       { text: "快速开始", link: "/pages/010101/" },
       { text: "后端手册", link: "/pages/010201/" },
