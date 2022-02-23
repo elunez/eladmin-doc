@@ -20,8 +20,8 @@
 
 // 万维
 module.exports = {
-  pageB: `
-    <div class="wwads-cn wwads-horizontal" data-id="148" style="width:100%;max-height:90px;"></div>
+  sidebarT: `
+    <div class="wwads-cn wwads-horizontal" data-id="148" style="width:220px;max-height:80px;"></div>
   `,
   windowRB: `
     <div class="wwads-cn wwads-vertical" data-id="148" style="max-width:200px;"></div>
