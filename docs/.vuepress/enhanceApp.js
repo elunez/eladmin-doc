@@ -15,7 +15,6 @@ export default ({
         _hmt.push(["_trackPageview", to.fullPath]);
       }
     }
-    console.log(to)
     next();
   });
 }
