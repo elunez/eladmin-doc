@@ -20,12 +20,12 @@
 module.exports = {
   sidebarT: `
     <a href="https://www.jnpfsoft.com/index.html?from=EL-ADMIN" target="_blank">
-      <img src="https://img.el-admin.xin/images/other/jnpfsoft.png" alt="快速构建开发平台" width="230px" height="71px">
+      <img src="https://img.el-admin.xin/images/other/jnpfsoft.png" alt="快速构建开发平台" width="230px" height="73px">
       </a>
   `,
  // 万维
   pageB: `
-    <div class="wwads-cn wwads-horizontal" data-id="148" style="width:100%;max-height:90px;"></div>
+    <div class="wwads-cn wwads-horizontal" data-id="148" style="width:100%;max-height:80px;"></div>
  `,
   windowRB: `
     <div class="wwads-cn wwads-vertical" data-id="148" style="max-width:200px;"></div>
