@@ -10,7 +10,6 @@ module.exports = [
     }
   ],
   ["meta", { name: "theme-color", content: "#11a8cd" }],
-  ["script", { async: true, src: "https://cdn.wwads.cn/js/makemoney.js" }],
   ['script', {}, `
     // 万维广告“禁止”广告拦截
     function ABDetected() {
