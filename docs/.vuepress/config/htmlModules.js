@@ -20,8 +20,10 @@
 
 // 万维
 module.exports = {
-  pageB: `
-    <div class="wwads-cn wwads-horizontal" data-id="148" style="width:100%;max-height:90px;"></div>
+  sidebarT: `
+    <a href="https://www.jnpfsoft.com/index.html?from=EL-ADMIN" target="_blank">
+      <img src="https://s2.loli.net/2022/02/23/EOSZseIn6WrlAMC.png" alt="快速构建开发平台" width="230px" height="69px">
+      </a>
   `,
   windowRB: `
     <div class="wwads-cn wwads-vertical" data-id="148" style="max-width:200px;"></div>
