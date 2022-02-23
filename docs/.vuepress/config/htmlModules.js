@@ -17,13 +17,13 @@
  * ①注：在.md文件front matter配置`article: false`的页面是自定义页，未配置的默认是文章页（首页除外）。
  * ②注：windowLB 和 windowRB：1.展示区块宽高最大是200*200px。2.请给自定义元素定一个不超过200px的固定宽高。3.在屏宽小于960px时无论如何都不会显示。
  */
-// 万维
 module.exports = {
   sidebarT: `
     <a href="https://www.jnpfsoft.com/index.html?from=EL-ADMIN" target="_blank">
-      <img src="https://s2.loli.net/2022/02/23/EOSZseIn6WrlAMC.png" alt="快速构建开发平台" width="230px" height="69px">
+      <img src="https://img.el-admin.xin/images/other/jnpfsoft.png" alt="快速构建开发平台" width="230px" height="71px">
       </a>
   `,
+ // 万维
  //  pageB: `
  //    <div class="wwads-cn wwads-horizontal" data-id="148" style="width:100%;max-height:90px;"></div>
  // `,
