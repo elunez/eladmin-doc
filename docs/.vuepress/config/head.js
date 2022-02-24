@@ -5,8 +5,7 @@ module.exports = [
     "meta",
     {
       name: "keywords",
-      content:
-        "el-admin,eladmin"
+      content: "eladmin,el-admin,eladmin官网,eladmin在线文档,eladmin学习"
     }
   ],
   ["meta", { name: "theme-color", content: "#11a8cd" }],
