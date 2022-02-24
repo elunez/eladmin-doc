@@ -11,19 +11,7 @@ module.exports = [
   },
   { text: "常见问题", link: "/pages/020101/" },
   { text: "支持项目", link: "/pages/030101/" },
-  { text: "体验地址", link: "https://el-admin.xin" },
-  { text: "作者博客", link: "https://www.ydyno.com" },
-  {
-    text: '项目源码',
-    items: [
-      {
-        text: 'Github',
-        link: 'https://github.com/elunez/eladmin'
-      },
-      {
-        text: 'Gitee',
-        link: 'https://gitee.com/elunez/eladmin'
-      }
-    ]
-  }
+  { text: "特别鸣谢", link: "/pages/040101/" },
+  { text: "在线体验", link: "https://el-admin.xin" },
+  { text: "作者博客", link: "https://www.ydyno.com" }
 ];
