@@ -19,5 +19,9 @@
     "vuepress-plugin-zooming": "^1.1.7",
     "vuepress-theme-vdoing": "^1.8.1",
     "yamljs": "^0.3.0"
+  },
+  "dependencies": {
+    "@vssue/api-github-v3": "^1.4.7",
+    "@vssue/vuepress-plugin-vssue": "^1.4.8"
   }
 }
