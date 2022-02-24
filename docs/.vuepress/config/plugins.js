@@ -53,5 +53,16 @@ module.exports = [
         return dayjs(timestamp).format("YYYY/MM/DD, HH:mm:ss");
       }
     }
+  ],
+  [
+    '@vssue/vuepress-plugin-vssue',
+    {
+      locale: 'zh-CN',
+      platform: 'github',
+      owner: 'elunez',
+      repo: 'eladmin-doc',
+      clientId: '0ab9b83a2d3b7b4795c5',
+      clientSecret: 'cf8c8402e74******803660492f1993c5',
+    }
   ]
 ];

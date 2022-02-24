@@ -23,7 +23,7 @@ module.exports = {
       <img src="https://img.el-admin.xin/images/other/jnpfsoft.png" alt="快速构建开发平台" width="230px" height="73px">
       </a>
   `,
- // 万维
+  // 万维
   pageB: `
     <div class="wwads-cn wwads-horizontal" data-id="148" style="width:100%;max-height:90px;"></div>
  `,
