@@ -1,5 +1,5 @@
 {
-  "name": "mybatis-plus-doc",
+  "name": "el-admin",
   "version": "1.0.0",
   "scripts": {
     "dev": "vuepress dev docs",
