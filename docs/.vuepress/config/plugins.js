@@ -58,7 +58,7 @@ module.exports = [
     '@vssue/vuepress-plugin-vssue',
     {
       locale: 'zh-CN',
-      platform: 'github',
+      platform: 'github-v4',
       owner: 'elunez',
       repo: 'eladmin-doc',
       clientId: '0ab9b83a2d3b7b4795c5',
