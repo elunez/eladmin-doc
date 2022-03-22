@@ -20,7 +20,7 @@
 module.exports = {
   sidebarT: `
     <a href="https://www.jnpfsoft.com/index.html?from=EL-ADMIN" target="_blank">
-      <img src="https://img.el-admin.xin/images/other/jnpfsoft.png" alt="快速构建开发平台" width="230px" height="73px">
+      <img src="https://img.el-admin.vip/images/other/jnpfsoft.png" alt="快速构建开发平台" width="230px" height="73px">
       </a>
   `,
   // 万维
