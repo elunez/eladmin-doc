@@ -12,6 +12,6 @@ module.exports = [
   { text: "常见问题", link: "/pages/020101/" },
   { text: "支持项目", link: "/pages/030101/" },
   { text: "特别鸣谢", link: "/pages/040101/" },
-  { text: "在线体验", link: "https://el-admin.xin" },
+  { text: "在线体验", link: "https://el-admin.vip/demo/" },
   { text: "作者博客", link: "https://www.ydyno.com" }
 ];
