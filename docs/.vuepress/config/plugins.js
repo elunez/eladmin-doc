@@ -2,8 +2,7 @@
 module.exports = [
   // 搜索框第三方搜索
   [
-    "thirdparty-search",
-    {
+    "thirdparty-search", {
       thirdparty: [
         {
           title: "在GitHub中搜索",
@@ -23,8 +22,7 @@ module.exports = [
   ],
   // 代码块复制
   [
-    "one-click-copy",
-    {
+    "one-click-copy", {
       copySelector: [
         'div[class*="language-"] pre',
         'div[class*="aside-code"] aside'
@@ -36,8 +34,7 @@ module.exports = [
   ],
   // 图片缩放
   [
-    "vuepress-plugin-zooming",
-    {
+    "vuepress-plugin-zooming", {
       selector: ".theme-vdoing-content img:not(.no-zoom)",
       options: {
         bgColor: "rgba(0,0,0,0.6)"
@@ -46,8 +43,7 @@ module.exports = [
   ],
   // "上次更新"时间格式
   [
-    "@vuepress/last-updated",
-    {
+    "@vuepress/last-updated", {
       transformer: (timestamp, lang) => {
         const dayjs = require("dayjs"); // https://day.js.org/
         return dayjs(timestamp).format("YYYY/MM/DD, HH:mm:ss");
@@ -55,14 +51,18 @@ module.exports = [
     }
   ],
   [
-    '@vssue/vuepress-plugin-vssue',
-    {
+    '@vssue/vuepress-plugin-vssue', {
       locale: 'zh-CN',
       platform: 'github-v4',
       owner: 'elunez',
       repo: 'eladmin-doc',
       clientId: '0ab9b83a2d3b7b4795c5',
       clientSecret: 'cf8c8402e74******803660492f1993c5',
+    }
+  ],
+  [
+  'sitemap', {
+      hostname: 'https://el-admin.vip' // 网站域名
     }
   ]
 ];
