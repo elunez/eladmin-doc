@@ -18,11 +18,11 @@
  * ②注：windowLB 和 windowRB：1.展示区块宽高最大是200*200px。2.请给自定义元素定一个不超过200px的固定宽高。3.在屏宽小于960px时无论如何都不会显示。
  */
 module.exports = {
-  // sidebarT: `
-  //   <a href="https://cloud.tencent.com/act/2022season?fromSource=gwzcw.5802644.5802644.5802644&utm_medium=cps&utm_id=gwzcw.5802644.5802644.5802644&cps_key=c564f58c50c7b4f8ebc123e605264289" target="_blank">
-  //     <img src="https://upload-dianshi-1255598498.file.myqcloud.com/%E4%B8%BB%E5%9B%BE%20345x200-a98b40478ab19ba61a5ce04ea26aedcaaa0e47b6.jpg" alt="腾讯云" width="235px" height="108px" style="border-radius: 8px;">
-  //     </a>
-  // `,
+  sidebarT: `
+    <a href="https://s.qiniu.com/zYfEjy" target="_blank">
+      <img src="https://img.el-admin.vip/images/qiniu/qiniu.jpg" alt="七牛云" width="230px" height="90px" style="border-radius: 8px;">
+    </a>
+  `,
   // 万维
   pageB: `
     <div class="wwads-cn wwads-horizontal" data-id="148" style="width:100%;max-height:90px;"></div>
