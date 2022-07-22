@@ -20,7 +20,7 @@
 module.exports = {
   // sidebarT: `
   //   <a href="https://s.qiniu.com/zYfEjy" target="_blank">
-  //     <img src="https://img.el-admin.vip/images/qiniu/qiniu.jpg" alt="七牛云" width="230px" height="90px" style="border-radius: 8px;">
+  //     <img src="https://images/qiniu/qiniu.jpg" alt="七牛云" width="230px" height="90px" style="border-radius: 8px;">
   //   </a>
   // `,
   // 万维
