@@ -53,9 +53,7 @@ module.exports = {
   footer: {
     createYear: 2018,
     copyrightInfo: [
-      ' <a href="https://www.ydyno.com/" target=_blank>知了博客</a>',
-      ' | ',
-      '<a href="http://beian.miit.gov.cn/" target=_blank>浙ICP备18005431号-7</a>'
+      ' <a href="https://www.ydyno.com/" target=_blank>知了博客</a>'
     ].join('')
   },
 
