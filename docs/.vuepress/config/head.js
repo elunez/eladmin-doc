@@ -10,6 +10,7 @@ module.exports = [
   ],
   ["meta", { name: "theme-color", content: "#11a8cd" }],
   ["meta", { "http-equiv": "Content-Type", content: "text/html;charset=gb2312" }],
+  ["meta", { name: "baidu-site-verification", content: "code-kdORRzs7wW" }],
   ["meta", { name: "sogou_site_verification", content: "K0Czk3nRO0" }],
   ["meta", { name: "360-site-verification", content: "0f840cb9fd8111aa6014e43d60b6ed79" }],
   ["script", { async: true, src: "https://cdn.wwads.cn/js/makemoney.js" }],
