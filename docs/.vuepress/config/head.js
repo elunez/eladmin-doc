@@ -55,7 +55,7 @@ module.exports = [
             (function() {
             let aHtml = document.createElement('a');
               var hm = document.createElement("script");
-              hm.src = "//hm.baidu.com/hm.js?6e843bf2bccfd3a2bf5e09f39934028a";
+              hm.src = "//hm.baidu.com/hm.js?300a24a5326d0e7a0ff1b14c4e8d9056";
               var s = document.getElementsByTagName("script")[0]; 
               s.parentNode.insertBefore(hm, s);
             })();`
