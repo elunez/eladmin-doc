@@ -1,6 +1,6 @@
-# EL-ADMIN-DOC
+# ELADMIN-DOC
 
-EL-ADMIN 文档源码
+ELADMIN 文档源码
 
 ## Build Setup
 ``` bash
