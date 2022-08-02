@@ -62,7 +62,7 @@ module.exports = [
   ],
   [
   'sitemap', {
-      hostname: 'https://el-admin.vip' // 网站域名
+      hostname: 'https://eladmin.vip' // 网站域名
     }
   ]
 ];
