@@ -53,7 +53,7 @@ module.exports = {
   footer: {
     createYear: 2018,
     copyrightInfo: [
-      ' <a href="https://www.ydyno.com/" target=_blank>知了博客</a>'
+      ' <a href="https://www.ydyno.com/" target=_blank>知了小站</a>'
     ].join('')
   },
 

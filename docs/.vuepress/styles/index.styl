@@ -6,7 +6,17 @@ table
   width auto
 .page >*:not(.footer),.card-box
   box-shadow: none!important
-
+.custom-block.tip {
+    background-color: #f3f5f7;
+    border-color: #11a8cd !important;
+    color: #215d42;
+}
+.custom-block.tip, .custom-block.warning, .custom-block.danger, .custom-block.note {
+    padding: 0.5rem 1.5rem;
+    border-left-width: 0.4rem !important;
+    border-left-style: solid;
+    margin: 1rem 0;
+}
 .page
   @media (min-width $contentWidth + 80)
     padding-top $navbarHeight!important

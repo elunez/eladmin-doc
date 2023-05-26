@@ -19,9 +19,6 @@
  */
 module.exports = {
   // 万维
-  pageB: `
-    <div class="wwads-cn wwads-horizontal" data-id="148" style="width:100%;max-height:90px;"></div>
-  `,
   windowRB: `
     <div class="wwads-cn wwads-vertical" data-id="148" style="max-width:200px;"></div>
     <script>
