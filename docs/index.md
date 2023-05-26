@@ -20,6 +20,18 @@ features:
   details: 支持电脑、平板、手机等所有主流设备访问。
 - title: 易用性
   details: 几乎可用于所有Web项目的开发，如 OA、Cms，网址后台管理等。
-
 postList: none
 ---
+
+<div style="margin-top: -10px;padding: 0">
+    <p align="center" style="color: #999;font-size: 13px;cursor: pointer;">
+     <a href="https://www.mingdao.com/?s=utm_78&utm_source=eladmin&utm_medium=banner&utm_campaign=IT网站&utm_content=IT赋能业务" target="_blank">
+        🌈 特别赞助
+     </a>
+    </p>
+    <p align="center">
+      <a href="https://www.mingdao.com/?s=utm_78&utm_source=eladmin&utm_medium=banner&utm_campaign=IT网站&utm_content=IT赋能业务" target="_blank">
+        <img src="https://eladmin.vip/images/banner/index.png" alt="明道云零代码构建平台" style="width: 351px;border-radius: 2px;;">
+      </a>
+    </p>
+</div>
