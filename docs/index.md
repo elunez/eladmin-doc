@@ -31,7 +31,7 @@ postList: none
     </p>
     <p align="center">
       <a href="https://www.mingdao.com/?s=utm_78&utm_source=eladmin&utm_medium=banner&utm_campaign=IT网站&utm_content=IT赋能业务" target="_blank">
-        <img src="https://eladmin.vip/images/banner/index.png" alt="明道云零代码构建平台" style="width: 351px;border-radius: 2px;;">
+        <img src="https://eladmin.vip/images/banner/index.png" alt="明道云零代码构建平台" style="width: 400px;border-radius: 2px;;">
       </a>
     </p>
 </div>
