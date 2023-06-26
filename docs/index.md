@@ -9,7 +9,7 @@ bannerBg: none
 
 features:
 - title: 技术栈
-  details: 使用 SpringBoot、Jpa、Security、Redis、Vue 等前后端前沿技术开发。
+  details: 使用 SpringBoot、Jpa OR MybatisPlus、Security、Redis、Vue 等前后端前沿技术开发。
 - title: 模块化
   details: 后端采用按功能分模块开发方式，提升开发，测试效率。
 - title: 高效率
