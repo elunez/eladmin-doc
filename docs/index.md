@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo/logo.png
 heroText: ELADMIN 在线文档
-tagline: 一个简单且易上手的 Spring boot 后台管理框架，已发布Mybatis-Plus版本
+tagline: 一个简单且易上手的 Spring boot 后台管理框架，已发布 Mybatis-Plus 版本
 actionText: 快速开始 →
 actionLink: /pages/010101/
 bannerBg: none
@@ -25,7 +25,7 @@ postList: none
     </p>
     <p align="center">
       <a href="https://www.mingdao.com/?s=utm_78&utm_source=eladmin&utm_medium=banner&utm_campaign=IT网站&utm_content=IT赋能业务" target="_blank">
-        <img src="https://eladmin.vip/images/banner/index.png" alt="明道云零代码构建平台" style="width: 400px;border-radius: 2px;;">
+        <img src="/images/banner/index.png" alt="明道云零代码构建平台" style="width: 400px;border-radius: 2px;;">
       </a>
     </p>
 </div>
