@@ -10,6 +10,7 @@ module.exports = [
     ]
   },
   { text: "常见问题", link: "/pages/020101/" },
+  { text: "更新日志", link: "/pages/060101/" },
   { text: "支持项目", link: "/pages/030101/" },
   { text: "特别鸣谢", link: "/pages/040101/" },
   { text: "服务器推荐", link: "/pages/050101/" },
