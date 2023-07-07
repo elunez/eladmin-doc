@@ -19,10 +19,10 @@
  */
 module.exports = {
   sidebarT: `
-      <a href="https://www.mingdao.com/?s=utm_78&utm_source=eladmin&utm_medium=banner&utm_campaign=IT网站&utm_content=IT赋能业务" target="_blank">
-        <img src="/images/banner/side.png" alt="明道云零代码构建平台" width="246px" height="72px">
-      </a>
-      <a href="https://www.mingdao.com/?s=utm_78&utm_source=eladmin&utm_medium=banner&utm_campaign=IT网站&utm_content=IT赋能业务" style="text-align: center;margin-top: 2px;margin-bottom:0;display:block;color: #999;font-size: 12px;" target="_blank">🌈 特别赞助 (明道云零代码构建平台)</a>
+<!--      <a href="" target="_blank">-->
+<!--        <img src="/images/banner/side.png" alt="" width="246px" height="72px">-->
+<!--      </a>-->
+<!--      <a href="" style="text-align: center;margin-top: 2px;margin-bottom:0;display:block;color: #999;font-size: 12px;" target="_blank">🌈 特别赞助</a>-->
   `,
   // 万维
   windowRB: `
