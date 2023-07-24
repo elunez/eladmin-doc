@@ -19,12 +19,12 @@ postList: none
 
 <div style="margin-top: -10px;padding: 0">
     <p align="center" style="color: #999;font-size: 13px;cursor: pointer;">
-     <a href="https://bwhstock.in/" target="_blank">
+     <a href="/pages/050101/" target="_blank">
         🎉 使用优惠码: BWHNCXNVXV，可获得 6.81% 的折扣
      </a>
     </p>
     <p align="center">
-      <a href="https://bwh81.net/aff.php?aff=70876" target="_blank">
+      <a href="/pages/050101/" target="_blank">
         <img src="/images/banner/side.jpeg" alt="搬瓦工" style="width: 400px;border-radius: 2px;;">
       </a>
     </p>
