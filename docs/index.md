@@ -24,7 +24,7 @@ postList: none
      </a>
     </p>
     <p align="center">
-      <a href="/pages/040101/">
+      <a href="https://bwh81.net/aff.php?aff=70876" target="_blank">
         <img src="/images/banner/side.jpeg" alt="搬瓦工" style="width: 400px;border-radius: 2px;;">
       </a>
     </p>
