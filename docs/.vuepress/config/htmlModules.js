@@ -19,10 +19,10 @@
  */
 module.exports = {
   sidebarT: `
-      <a href="/pages/050101/" style="margin-top: -8px;" target="_blank">
+      <a href="/pages/040101/" style="margin-top: -8px;" target="_blank">
         <img src="/images/banner/side.jpeg" alt="搬瓦工" width="243px" height="70px">
       </a>
-      <a href="/pages/050101/" style="text-align: center;margin-top: 2px;margin-bottom:0;display:block;color: #999;font-size: 12px;" target="_blank">🎉 优惠码: BWHNCXNVXV 6.81% 折扣</a>
+      <a href="/pages/040101/" style="text-align: center;margin-top: 2px;margin-bottom:0;display:block;color: #999;font-size: 12px;" target="_blank">🎉 优惠码: BWHNCXNVXV 6.81% 折扣</a>
   `,
   // 万维
   windowRB: `
