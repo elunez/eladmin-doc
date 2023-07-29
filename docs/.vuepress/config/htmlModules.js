@@ -19,7 +19,7 @@
  */
 module.exports = {
   sidebarT: `
-      <a href="https://bwhstock.in" target="_blank" style="margin-top: -8px;">
+      <a href="https://eladmin.vip/pages/040101/" target="_blank" style="margin-top: -8px;">
         <img src="/images/banner/side.jpeg" alt="搬瓦工" width="243px" height="70px">
       </a>
       <a href="https://bwhstock.in" style="text-align: center;margin-top: 2px;margin-bottom:0;display:block;color: #999;font-size: 12px;">🎉 优惠码: BWHNCXNVXV 6.81% 折扣</a>

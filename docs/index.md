@@ -24,7 +24,7 @@ postList: none
      </a>
     </p>
     <p align="center">
-      <a href="https://bwhstock.in" target="_blank">
+      <a href="https://eladmin.vip/pages/040101/" target="_blank">
         <img src="/images/banner/side.jpeg" alt="搬瓦工" style="width: 400px;border-radius: 2px;;">
       </a>
     </p>
