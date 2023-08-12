@@ -19,10 +19,10 @@
  */
 module.exports = {
   sidebarT: `
-      <a href="https://eladmin.vip/pages/040101/" target="_blank" style="margin-top: -8px;">
-        <img src="/images/banner/side.jpeg" alt="搬瓦工" width="243px" height="70px">
+      <a href="https://www.mingdao.com/?s=utm_78&utm_source=eladmin&utm_medium=banner&utm_campaign=IT网站&utm_content=IT赋能业务" target="_blank" style="margin-top: -8px;">
+        <img src="/images/banner/mdy_side.png" alt="明道云零代码构建平台" width="246px" height="72px">
       </a>
-      <a href="https://bwhstock.in" style="text-align: center;margin-top: 2px;margin-bottom:0;display:block;color: #999;font-size: 12px;">🎉 优惠码: BWHNCXNVXV 6.81% 折扣</a>
+      <a href="https://www.mingdao.com/?s=utm_78&utm_source=eladmin&utm_medium=banner&utm_campaign=IT网站&utm_content=IT赋能业务" style="text-align: center;margin-top: 2px;margin-bottom:0;display:block;color: #999;font-size: 12px;">🌈 特别赞助 (明道云零代码构建平台)</a>
   `,
   // 万维
   windowRB: `
