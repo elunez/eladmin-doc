@@ -26,11 +26,10 @@ module.exports = {
   `,
   // 万维
   windowRB: `
-    <div class="wwads-cn wwads-vertical" data-id="148" style="max-width:200px;"></div>
-    <script>
-        var ele = document.querySelector('.wwads-vertical').parentElement.parentElement;
-        ele.style.maxHeight = 'unset';
-        ele.firstChild.hidden = true;
-    </script>
+      <div style="margin-bottom: -3px">
+      <a href="/pages/040101/">
+        <img src="https://b.bdstatic.com/comment/ttip45IFz9oXINYfeXJvyA0bfb9528a4286173af2c4cdf4acf6d72.png" alt="明道云零代码构建平台" style="height: 200px;width: 170px;border-top-left-radius: 8px;border-top-right-radius:8px">
+      </a>
+    </div>
   `
 };
