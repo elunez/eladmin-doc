@@ -1,3 +1,10 @@
+import Ads from 'vue-google-adsense'
+
+Vue.use(require('vue-script2'))
+Vue.use(Ads.Adsense)
+Vue.use(Ads.InArticleAdsense)
+Vue.use(Ads.InFeedAdsense)
+
 export default ({
   Vue, // VuePress 正在使用的 Vue 构造函数
   options, // 附加到根实例的一些选项
@@ -5,19 +12,6 @@ export default ({
   siteData // 站点元数据
 
 }) => {
-  if (typeof window !== 'undefined') {
-    import('vue-google-adsense')
-        .then(module => {
-          const Ads = module.default
-          Vue.use(require('vue-script2'))
-          Vue.use(Ads.Adsense)
-          Vue.use(Ads.InArticleAdsense)
-          Vue.use(Ads.InFeedAdsense)
-        })
-        .catch(e => {
-          console.log(e)
-        })
-  }
   /**
    * 路由切换事件处理
    */
