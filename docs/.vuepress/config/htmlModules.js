@@ -25,15 +25,12 @@ module.exports = {
       <a href="https://www.mingdao.com/?s=utm_78&utm_source=eladmin&utm_medium=banner&utm_campaign=IT网站&utm_content=IT赋能业务" style="text-align: center;margin-top: 2px;margin-bottom:0;display:block;color: #999;font-size: 12px;">🌈 特别赞助 (明道云零代码构建平台)</a>
   `,
   windowRB: `
-     <div style="margin-bottom: -3px">
-    <!-- 展示广告 -->
-    <ins class="adsbygoogle"
-         style="display:inline-block;width:180px;height:230px"
-         data-ad-client="ca-pub-8910254103038240"
-         data-ad-slot="6184054065"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+    <div style="margin-bottom: -3px">
+    <InArticleAdsense
+      style="display:inline-block;width:180px;height:230px"
+      data-ad-client="ca-pub-8910254103038240"
+      data-ad-slot="6184054065">
+    </InArticleAdsense>
     </div>
   `
 };
