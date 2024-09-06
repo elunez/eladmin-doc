@@ -24,12 +24,16 @@ module.exports = {
       </a>
       <a href="https://www.mingdao.com/?s=utm_78&utm_source=eladmin&utm_medium=banner&utm_campaign=IT网站&utm_content=IT赋能业务" style="text-align: center;margin-top: 2px;margin-bottom:0;display:block;color: #999;font-size: 12px;">🌈 特别赞助 (明道云零代码构建平台)</a>
   `,
-  // 万维
   windowRB: `
-      <div style="margin-bottom: -3px">
-      <a href="https://bwh81.net/aff.php?aff=70876" target="_blank">
-        <img src="https://izlzl.com/usr/uploads/2024/08/3103712587.png" alt="帮瓦工" style="height: 200px;width: 165px;border-top-left-radius: 8px;border-top-right-radius:8px">
-      </a>
+     <div style="margin-bottom: -3px">
+    <!-- 展示广告 -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:180px;height:230px"
+         data-ad-client="ca-pub-8910254103038240"
+         data-ad-slot="6184054065"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     </div>
   `
 };
