@@ -26,11 +26,9 @@ module.exports = {
   `,
   windowRB: `
     <div style="margin-bottom: -3px">
-    <InArticleAdsense
-      style="display:inline-block;width:180px;height:230px"
-      data-ad-client="ca-pub-8910254103038240"
-      data-ad-slot="6184054065">
-    </InArticleAdsense>
+        <a href="https://bwh81.net/aff.php?aff=70876" target="_blank">
+        <img src="https://izlzl.com/usr/uploads/2024/08/3103712587.png" alt="帮瓦工" style="height: 200px;width: 165px;border-top-left-radius: 8px;border-top-right-radius:8px">
+      </a>
     </div>
   `
 };
