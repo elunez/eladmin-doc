@@ -26,7 +26,7 @@ module.exports = {
   `,
   windowRB: `
     <div style="margin-bottom: -3px">
-        <a href="https://bwh81.net/aff.php?aff=56096" target="_blank">
+        <a href="https://bwh81.net/aff.php?aff=70876" target="_blank">
         <img src="https://izlzl.com/usr/uploads/2024/08/3103712587.png" alt="帮瓦工" style="height: 200px;width: 165px;border-top-left-radius: 8px;border-top-right-radius:8px">
       </a>
     </div>
