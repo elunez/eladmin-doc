@@ -7,5 +7,17 @@ module.exports = [
   ["meta", { name: "baidu-site-verification", content: "code-kdORRzs7wW" }],
   ["meta", { name: "sogou_site_verification", content: "M7FZGnsiqa" }],
   ["meta", { name: "360-site-verification", content: "f6ae0ca805b4ad57430f50784d798c2e" }],
-  ["script", { async: true, defer: true, src: "https://maxkb.opaoai.com/api/application/embed?protocol=https&host=maxkb.opaoai.com&token=d1a6c9b01ce4d9bc"}]
+  ["script", { async: true, src: "https://maxkb.opaoai.com/api/application/embed?protocol=https&host=maxkb.opaoai.com&token=d1a6c9b01ce4d9bc"}],
+  [
+    "script",
+    {}, `
+            var _hmt = _hmt || [];
+            (function() {
+            let aHtml = document.createElement('a');
+              var hm = document.createElement("script");
+              hm.src = "//hm.baidu.com/hm.js?a8cc029036ab1e31acc5e8c8a519fe45";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();`
+  ]
 ]
