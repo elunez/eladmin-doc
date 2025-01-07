@@ -7,7 +7,6 @@ module.exports = [
   ["meta", { name: "baidu-site-verification", content: "code-kdORRzs7wW" }],
   ["meta", { name: "sogou_site_verification", content: "M7FZGnsiqa" }],
   ["meta", { name: "360-site-verification", content: "f6ae0ca805b4ad57430f50784d798c2e" }],
-  ["script", { async: true, src: "https://maxkb.opaoai.com/api/application/embed?protocol=https&host=maxkb.opaoai.com&token=d1a6c9b01ce4d9bc"}],
   [
     "script",
     {}, `
