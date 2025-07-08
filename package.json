@@ -11,12 +11,12 @@
   "devDependencies": {
     "dayjs": "^1.9.7",
     "inquirer": "^7.1.0",
-    "json2yaml": "^1.1.0",
-    "vuepress": "^1.4.1",
-    "vuepress-plugin-demo-block": "^0.7.2",
-    "vuepress-plugin-one-click-copy": "^1.0.2",
-    "vuepress-plugin-thirdparty-search": "^1.0.2",
-    "vuepress-theme-vdoing": "^1.8.1",
+    "json2yaml": "1.1.0",
+    "vuepress": "1.9.10",
+    "vuepress-plugin-demo-block": "0.7.2",
+    "vuepress-plugin-one-click-copy": "1.0.6",
+    "vuepress-plugin-thirdparty-search": "1.0.2",
+    "vuepress-theme-vdoing": "1.12.9",
     "yamljs": "^0.3.0"
   },
   "dependencies": {
